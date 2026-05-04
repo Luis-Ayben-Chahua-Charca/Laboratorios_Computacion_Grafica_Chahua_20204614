@@ -1,0 +1,17 @@
+# Ignora estas carpetas donde sea que estén (cascada)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+
+# Archivos de proyecto de Visual Studio
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+.vs/
