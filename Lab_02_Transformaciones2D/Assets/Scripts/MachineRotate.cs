@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MachineRotate : MonoBehaviour
+public class MachineRotate : MonoBehaviour, IMachine
 {
-    public float interactRange = 1.5f;
-    public LayerMask boxLayer;
+    //public float interactRange = 1.5f;
+    //public LayerMask boxLayer;
 
     public Sprite leverUp;
     public Sprite leverDown;
 
     private SpriteRenderer sr;
     private bool isBusy = false;
+
+    public MachineSlot slot;
 
     void Start()
     {
@@ -19,16 +21,14 @@ public class MachineRotate : MonoBehaviour
 
     public void Activate()
     {
+
         if (isBusy) return;
-
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactRange, boxLayer);
-
-        if (hit != null)
+        Debug.Log("Objeto en slot: " + slot.storedObject);
+        if (slot.storedObject != null)
         {
-            Transform obj = hit.transform;
+            Transform obj = slot.storedObject;
 
-            // ROTAR 90°
-            obj.Rotate(0, 0, 90f);
+            obj.rotation = Quaternion.Euler(0, 0, obj.eulerAngles.z + 90f);
 
             StartCoroutine(LeverAnimation());
         }
@@ -50,6 +50,6 @@ public class MachineRotate : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, interactRange);
+        //Gizmos.DrawWireSphere(transform.position, interactRange);
     }
 }

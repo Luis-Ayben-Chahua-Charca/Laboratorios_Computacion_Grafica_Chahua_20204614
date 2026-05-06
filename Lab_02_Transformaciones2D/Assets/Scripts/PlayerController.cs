@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -33,8 +34,10 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private float verticalInput;
 
-    public LayerMask machineRotatorLayer;
+    [Header("Machine Interaction")]
+    public LayerMask machineLayer;
     public float interactRange = 1.5f;
+    public LayerMask slotLayer;
 
     void Start()
     {
@@ -62,7 +65,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             
-            TryUseMachineRotator();
+            TryUseMachine();
         }
     }
 
@@ -117,10 +120,17 @@ public class PlayerController : MonoBehaviour
 
         if (grabbedRb == null) return; // seguridad extra
 
+        MachineSlot slot = grabbedObject.GetComponentInParent<MachineSlot>();
+
+        if (slot != null && slot.storedObject == grabbedObject.transform)
+        {
+            slot.storedObject = null;
+        }
+
         // Desactivar física
-        grabbedRb.linearVelocity = Vector2.zero;
         grabbedRb.bodyType = RigidbodyType2D.Kinematic;
-        grabbedRb.freezeRotation = true;
+        grabbedRb.constraints = RigidbodyConstraints2D.None; // 🔥 clave
+        grabbedRb.freezeRotation = true; // solo mientras lo cargas
 
         // IGNORAR COLISIÓN
         Collider2D playerCol = GetComponent<Collider2D>();
@@ -133,6 +143,66 @@ public class PlayerController : MonoBehaviour
     }
 
     void ReleaseObject()
+    {
+        if (grabbedObject == null) return;
+
+        MachineSlot slot = FindClosestSlot();
+
+        if (slot != null && slot.storedObject == null && slot.playerInRange)
+        {
+            grabbedObject.transform.SetPositionAndRotation(
+                slot.transform.position,
+                Quaternion.identity
+            );
+
+            grabbedRb.bodyType = RigidbodyType2D.Kinematic;
+            grabbedRb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            // 🔥 IMPORTANTE: reactivar colisión con player
+            Collider2D playerCol = GetComponent<Collider2D>();
+            Collider2D objectCol = grabbedObject.GetComponent<Collider2D>();
+
+            if (playerCol != null && objectCol != null)
+            {
+                Physics2D.IgnoreCollision(playerCol, objectCol, false);
+            }
+
+            slot.storedObject = grabbedObject.transform;
+
+            grabbedObject = null;
+            grabbedRb = null;
+
+            return;
+        }
+
+        // normal
+        Collider2D playerCol2 = GetComponent<Collider2D>();
+        Collider2D objectCol2 = grabbedObject.GetComponent<Collider2D>();
+
+        if (playerCol2 != null && objectCol2 != null)
+        {
+            Physics2D.IgnoreCollision(playerCol2, objectCol2, false);
+        }
+
+        grabbedRb.bodyType = RigidbodyType2D.Dynamic;
+        grabbedRb.freezeRotation = false;
+
+        grabbedObject = null;
+        grabbedRb = null;
+    }
+
+    MachineSlot FindClosestSlot()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactRange, slotLayer);
+
+        if (hit != null)
+        {
+            return hit.GetComponentInParent<MachineSlot>();
+        }
+
+        return null;
+    }
+    /*void ReleaseObject()
     {
         if (grabbedObject == null) return;
 
@@ -150,20 +220,27 @@ public class PlayerController : MonoBehaviour
 
         grabbedObject = null;
         grabbedRb = null;
+    }*/
+
+    public void ForceReleaseIfHolding(GameObject obj)
+    {
+        if (grabbedObject == obj)
+        {
+            ReleaseObject();
+        }
     }
 
-    void TryUseMachineRotator()
+    void TryUseMachine()
     {
-        
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactRange, machineRotatorLayer);
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactRange, machineLayer);
 
         if (hit != null)
         {
-            MachineRotate machineRotate = hit.GetComponent<MachineRotate>();
-            Debug.Log("Intentando usar máquina rotadora...");
-            if (machineRotate != null)
+            IMachine machine = hit.GetComponentInParent<IMachine>();
+
+            if (machine != null)
             {
-                machineRotate.Activate();
+                machine.Activate();
             }
         }
     }
