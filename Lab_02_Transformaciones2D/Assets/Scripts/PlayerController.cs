@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInput;
     private bool isGrounded;
-    private float verticalInput;  
+    private float verticalInput;
+
+    public LayerMask machineRotatorLayer;
+    public float interactRange = 1.5f;
 
     void Start()
     {
@@ -54,6 +57,12 @@ public class PlayerController : MonoBehaviour
                 TryGrab();
             else
                 ReleaseObject();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            
+            TryUseMachineRotator();
         }
     }
 
@@ -136,10 +145,27 @@ public class PlayerController : MonoBehaviour
         }
 
         grabbedRb.bodyType = RigidbodyType2D.Dynamic;
+        grabbedRb.linearVelocity = Vector2.zero;
         grabbedRb.freezeRotation = false;
 
         grabbedObject = null;
         grabbedRb = null;
+    }
+
+    void TryUseMachineRotator()
+    {
+        
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactRange, machineRotatorLayer);
+
+        if (hit != null)
+        {
+            MachineRotate machineRotate = hit.GetComponent<MachineRotate>();
+            Debug.Log("Intentando usar máquina rotadora...");
+            if (machineRotate != null)
+            {
+                machineRotate.Activate();
+            }
+        }
     }
 
     // =========================
