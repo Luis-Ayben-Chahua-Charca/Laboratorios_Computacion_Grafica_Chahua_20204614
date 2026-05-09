@@ -120,12 +120,17 @@ public class PlayerController : MonoBehaviour
 
         if (grabbedRb == null) return; // seguridad extra
 
-        MachineSlot slot = grabbedObject.GetComponentInParent<MachineSlot>();
+        MachineSlot[] slots = Object.FindObjectsByType<MachineSlot>();
 
-        if (slot != null && slot.storedObject == grabbedObject.transform)
+        foreach (var s in slots)
         {
-            slot.storedObject = null;
+            if (s.storedObject == grabbedObject.transform)
+            {
+                s.storedObject = null;
+                break;
+            }
         }
+
 
         // Desactivar física
         grabbedRb.bodyType = RigidbodyType2D.Kinematic;

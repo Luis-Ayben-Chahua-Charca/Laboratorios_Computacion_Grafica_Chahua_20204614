@@ -30,10 +30,10 @@ public class MachineSlot : MonoBehaviour
         Rigidbody2D rb = storedObject.GetComponent<Rigidbody2D>();
         if (rb == null) return;
 
-        // 🔥 solo cuando ya casi está quieto
+        // solo cuando ya casi está quieto
         if (rb.linearVelocity.magnitude > 0.1f) return;
 
-        // 🔥 centrar suavemente (snap final)
+        // centrar suavemente (snap final)
         storedObject.position = Vector3.Lerp(
             storedObject.position,
             transform.position,
