@@ -10,7 +10,7 @@ public class CameraManager : MonoBehaviour
     [Header("Controllers")]
     [SerializeField] private MonoBehaviour fpsController;
 
-    [SerializeField] private MonoBehaviour tpsController;
+    /*[SerializeField] private MonoBehaviour tpsController;*/
 
     [Header("Input Settings")]
     [SerializeField] private KeyCode switchCameraKey = KeyCode.V;
@@ -35,10 +35,14 @@ public class CameraManager : MonoBehaviour
 
             if (isFirstPerson)
             {
+                fpsCamera.tag = "MainCamera";
+                tpsCamera.tag = "Untagged";
                 ActivateFPS();
             }
             else
             {
+                tpsCamera.tag = "MainCamera";
+                fpsCamera.tag = "Untagged";
                 ActivateTPS();
             }
         }
@@ -50,7 +54,8 @@ public class CameraManager : MonoBehaviour
         tpsCamera.SetActive(false);
 
         fpsController.enabled = true;
-        tpsController.enabled = false;
+
+        //tpsController.enabled = false;
     }
 
     void ActivateTPS()
@@ -58,7 +63,7 @@ public class CameraManager : MonoBehaviour
         fpsCamera.SetActive(false);
         tpsCamera.SetActive(true);
 
-        fpsController.enabled = false;
-        tpsController.enabled = true;
+        fpsController.enabled = true;
+        //tpsController.enabled = true;
     }
 }

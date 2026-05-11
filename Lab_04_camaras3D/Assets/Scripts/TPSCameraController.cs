@@ -3,12 +3,13 @@ using UnityEngine;
 public class TPSCameraController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform cameraPivot;
 
-    [Header("Camera Settings")]
-    [SerializeField] private Vector3 offset = new Vector3(0f, 2f, -4f);
-
+    [Header("Follow Settings")]
     [SerializeField] private float followSpeed = 10f;
+    /*[Header("Camera Settings")]
+    [SerializeField] private Vector3 offset = new Vector3(0f, 2f, -4f);*/
+
 
     void LateUpdate()
     {
@@ -17,7 +18,14 @@ public class TPSCameraController : MonoBehaviour
 
     void FollowTarget()
     {
-        Vector3 desiredPosition =
+        transform.position = Vector3.Lerp(
+            transform.position,
+            cameraPivot.position,
+            followSpeed * Time.deltaTime
+        );
+
+        transform.rotation = cameraPivot.rotation;
+        /*Vector3 desiredPosition =
             target.position +
             target.rotation * offset;
 
@@ -27,6 +35,6 @@ public class TPSCameraController : MonoBehaviour
             followSpeed * Time.deltaTime
         );
 
-        transform.LookAt(target.position + Vector3.up * 1.5f);
+        transform.LookAt(target.position + Vector3.up * 1.5f);*/
     }
 }
