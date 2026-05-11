@@ -12316,6 +12316,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3737933864941184597, guid: a4064c030dc6b6645bd0b2e863aa4b23, type: 3}
+      propertyPath: m_Name
+      value: TPSAnchor
+      objectReference: {fileID: 0}
     - target: {fileID: 5175024755438180718, guid: a4064c030dc6b6645bd0b2e863aa4b23, type: 3}
       propertyPath: m_Name
       value: Character

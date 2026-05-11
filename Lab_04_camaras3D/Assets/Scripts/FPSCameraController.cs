@@ -16,7 +16,7 @@ public class FPSCameraController : MonoBehaviour
     {
         HandleMouseLook();
     }
-
+    
     void HandleMouseLook()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
