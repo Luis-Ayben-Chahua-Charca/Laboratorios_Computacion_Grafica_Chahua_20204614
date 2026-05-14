@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
             grabbedRb.bodyType = RigidbodyType2D.Kinematic;
             grabbedRb.constraints = RigidbodyConstraints2D.FreezeAll;
 
-            // 🔥 IMPORTANTE: reactivar colisión con player
+            
             Collider2D playerCol = GetComponent<Collider2D>();
             Collider2D objectCol = grabbedObject.GetComponent<Collider2D>();
 
