@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int puntosPrincipal = 200;
     [SerializeField] int puntosPorDisparoRestante = 200;
 
+    
     void Awake()
     {
         instance = this;
