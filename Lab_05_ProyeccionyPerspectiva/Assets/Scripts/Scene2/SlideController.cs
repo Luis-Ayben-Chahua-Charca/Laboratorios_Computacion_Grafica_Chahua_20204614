@@ -14,6 +14,7 @@ public class SideScrollerController : MonoBehaviour
 
     private void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
 
         rb.constraints =
