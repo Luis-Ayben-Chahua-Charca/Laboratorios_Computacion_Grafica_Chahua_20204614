@@ -6,9 +6,11 @@ public class MoodManager : MonoBehaviour
 
     public Light directionalLight;
 
-    public MoodData comfort;
+    public MoodData happy;
     public MoodData sadness;
     public MoodData fear;
+    public MoodData peace;
+
 
     private void Awake()
     {
@@ -20,7 +22,7 @@ public class MoodManager : MonoBehaviour
         switch (mood)
         {
             case MoodType.Happy:
-                ApplyMood(comfort);
+                ApplyMood(happy);
                 break;
 
             case MoodType.Sadness:
@@ -29,6 +31,10 @@ public class MoodManager : MonoBehaviour
 
             case MoodType.Fear:
                 ApplyMood(fear);
+                break;
+
+            case MoodType.Peace:
+                ApplyMood(peace);
                 break;
         }
     }

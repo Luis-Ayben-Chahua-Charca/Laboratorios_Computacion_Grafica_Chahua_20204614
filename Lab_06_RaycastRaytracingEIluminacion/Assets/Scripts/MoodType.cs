@@ -2,5 +2,6 @@ public enum MoodType
 {
     Happy,
     Sadness,
-    Fear
+    Fear,
+    Peace
 }
