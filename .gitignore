@@ -15,3 +15,29 @@
 *.user
 *.userprefs
 .vs/
+ 
+# Entorno virtual
+.venv/
+venv/
+
+# Variables de entorno
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VSCode
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Jupyter (si llegas a usarlo)
+.ipynb_checkpoints/
+
+# Archivos temporales
+*.tmp
