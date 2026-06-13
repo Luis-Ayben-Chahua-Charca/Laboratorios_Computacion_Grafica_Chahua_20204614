@@ -22,10 +22,10 @@ Se desarrollan los siguientes ejercicios:
 
 ## Tecnologías utilizadas
 
-- Python 3.x
+- Python 3.14
 - OpenCV
 - NumPy
-- Matplotlib (opcional)
+- Matplotlib 
 
 ---
 
@@ -39,16 +39,9 @@ python -m venv .venv
 
 Activar entorno virtual:
 
-### Windows
 
 ```bash
 .venv\Scripts\activate
-```
-
-### Linux / Mac
-
-```bash
-source .venv/bin/activate
 ```
 
 Instalar dependencias:
