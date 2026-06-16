@@ -3,6 +3,7 @@ import numpy as np
 from pathlib import Path
 from tkinter import Tk
 from tkinter.filedialog import asksaveasfilename
+import math
 
 # ==================================================
 # CONFIGURACION
@@ -20,6 +21,12 @@ historial = [canvas.copy()]
 
 modo = "circulo"
 
+dibujando = False
+
+punto_inicio = None
+
+preview = None
+
 # ==================================================
 # BOTONES
 # ==================================================
@@ -29,6 +36,7 @@ botones = {
     "rectangulo": (160, 10, 320, 50),
     "linea": (340, 10, 450, 50),
     "limpiar": (470, 10, 580, 50),
+    "guardar": (600, 10, 720, 50),
 }
 
 
@@ -90,6 +98,31 @@ def boton_presionado(x, y):
 
     return None
 
+def guardar_dibujo(canvas):
+
+    root = Tk()
+    root.withdraw()
+
+    ruta = asksaveasfilename(
+        title="Guardar dibujo",
+        defaultextension=".png",
+        filetypes=[
+            ("PNG", "*.png"),
+            ("JPEG", "*.jpg"),
+            ("Todos los archivos", "*.*")
+        ]
+    )
+
+    root.destroy()
+
+    if ruta:
+
+        cv2.imwrite(
+            ruta,
+            canvas
+        )
+
+        print(f"Dibujo guardado en: {ruta}")
 
 # ==================================================
 # MOUSE
@@ -101,67 +134,125 @@ def mouse_callback(event, x, y, flags, param):
     global canvas
     global historial
 
-    if event != cv2.EVENT_LBUTTONDOWN:
-        return
+    global dibujando
+    global punto_inicio
+    global preview
 
-    # ---------------------------------
-    # BOTONES
-    # ---------------------------------
+    # -------------------------
+    # CLICK INICIAL
+    # -------------------------
 
-    boton = boton_presionado(x, y)
+    if event == cv2.EVENT_LBUTTONDOWN:
 
-    if boton is not None:
+        boton = boton_presionado(x, y)
 
-        if boton == "limpiar":
+        if boton is not None:
+
+            if boton == "limpiar":
+
+                historial.append(canvas.copy())
+
+                canvas[:] = 255
+
+            else:
+
+                modo = boton
+
+            return
+
+        if y <= ALTURA_MENU:
+            return
+
+        dibujando = True
+
+        punto_inicio = (x, y)
+
+    # -------------------------
+    # MOVIMIENTO
+    # -------------------------
+
+    elif event == cv2.EVENT_MOUSEMOVE:
+
+        if dibujando:
+
+            preview = canvas.copy()
+
+            if modo == "rectangulo":
+
+                cv2.rectangle(
+                    preview,
+                    punto_inicio,
+                    (x, y),
+                    (255, 0, 0),
+                    3
+                )
+            elif modo == "linea":
+
+                cv2.line(
+                    preview,
+                    punto_inicio,
+                    (x, y),
+                    (0, 255, 0),
+                    3
+                )
+            elif modo == "circulo":
+
+                radio = int(
+                    math.sqrt((x - punto_inicio[0]) ** 2 + (y - punto_inicio[1]) ** 2)
+                )
+
+                cv2.circle(
+                    preview,
+                    punto_inicio,
+                    radio,
+                    (0, 0, 255),
+                    3
+                )        
+
+    # -------------------------
+    # SOLTAR MOUSE
+    # -------------------------
+
+    elif event == cv2.EVENT_LBUTTONUP:
+
+        if dibujando:
 
             historial.append(canvas.copy())
 
-            canvas[:] = 255
+            if modo == "rectangulo":
 
-        else:
+                cv2.rectangle(
+                    canvas,
+                    punto_inicio,
+                    (x, y),
+                    (255, 0, 0),
+                    3
+                )
+            elif modo == "linea":
+                cv2.line(
+                    canvas,
+                    punto_inicio,
+                    (x, y),
+                    (0, 255, 0),
+                    3
+                )
+            elif modo == "circulo":
 
-            modo = boton
+                radio = int(
+                    math.sqrt((x - punto_inicio[0]) ** 2 + (y - punto_inicio[1]) ** 2)
+                )
 
-        return
+                cv2.circle(
+                    canvas,
+                    punto_inicio,
+                    radio,
+                    (0, 0, 255),
+                    3
+                )
 
-    # ---------------------------------
-    # AREA DE DIBUJO
-    # ---------------------------------
+            dibujando = False
 
-    if y <= ALTURA_MENU:
-        return
-
-    historial.append(canvas.copy())
-
-    if modo == "circulo":
-
-        cv2.circle(
-            canvas,
-            (x, y),
-            40,
-            (0, 0, 255),
-            3
-        )
-
-    elif modo == "rectangulo":
-
-        cv2.rectangle(
-            canvas,
-            (x - 50, y - 30),
-            (x + 50, y + 30),
-            (255, 0, 0),
-            3
-        )
-
-    elif modo == "linea":
-
-        cv2.line(
-            canvas,
-            (x - 50, y - 50),
-            (x + 50, y + 50),
-            (0, 255, 0),
-            3
-        )
+            preview = None
 
 
 # ==================================================
@@ -180,7 +271,11 @@ cv2.setMouseCallback(
 
 while True:
 
-    pantalla = canvas.copy()
+    
+    if dibujando and preview is not None:
+        pantalla = preview.copy()
+    else:
+        pantalla = canvas.copy()
 
     dibujar_interfaz(pantalla)
 
@@ -203,33 +298,12 @@ while True:
 
             canvas = historial[-1].copy()
 
-    # -------------------------
-    # GUARDAR
-    # -------------------------
-
-    elif tecla == ord("s"):
-
-        ruta = (
-            raiz /
-            "resultados" /
-            "dibujo_interactivo"
-            "dibujo_interactivo.png"
-        )
-
-        cv2.imwrite(
-            str(ruta),
-            canvas
-        )
-
-        print(
-            f"Guardado en: {ruta}"
-        )
 
     # -------------------------
     # SALIR
     # -------------------------
 
-    elif tecla == 27:
+    if tecla == 27:
         break
 
 cv2.destroyAllWindows()
