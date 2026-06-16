@@ -11,7 +11,7 @@ import math
 
 raiz = Path(__file__).resolve().parent.parent
 
-ANCHO = 1000
+ANCHO = 1200
 ALTO = 700
 ALTURA_MENU = 60
 
@@ -77,7 +77,7 @@ def dibujar_interfaz(img):
     cv2.putText(
         img,
         f"Modo actual: {modo}",
-        (650, 35),
+        (800, 35),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.7,
         (0, 0, 255),
@@ -153,7 +153,10 @@ def mouse_callback(event, x, y, flags, param):
                 historial.append(canvas.copy())
 
                 canvas[:] = 255
-
+                
+            elif boton == "guardar":
+                guardar_dibujo(canvas)
+                
             else:
 
                 modo = boton
