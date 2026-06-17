@@ -100,11 +100,20 @@ def boton_presionado(x, y):
 
 def guardar_dibujo(canvas):
 
+    ruta_resultados = raiz / "resultados" / "dibujo_interactivo"
+
+    ruta_resultados.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+    
     root = Tk()
     root.withdraw()
 
     ruta = asksaveasfilename(
         title="Guardar dibujo",
+        initialdir=str(ruta_resultados),
+        initialfile="dibujo.png",
         defaultextension=".png",
         filetypes=[
             ("PNG", "*.png"),
