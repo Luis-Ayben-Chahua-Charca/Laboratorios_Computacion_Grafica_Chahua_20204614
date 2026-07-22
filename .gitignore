@@ -41,3 +41,28 @@ Thumbs.db
 
 # Archivos temporales
 *.tmp
+
+# Paquetes de assets de terceros (no versionar, se reimportan si hace falta)
+Lab_Final_GhostFarm/Assets/ALP_Assets/
+Lab_Final_GhostFarm/Assets/ALP_Assets.meta
+Lab_Final_GhostFarm/Assets/TerrainSampleAssets/
+Lab_Final_GhostFarm/Assets/TerrainSampleAssets.meta
+Lab_Final_GhostFarm/Assets/HDRPDefaultResources/
+Lab_Final_GhostFarm/Assets/HDRPDefaultResources.meta
+Lab_Final_GhostFarm/Assets/Imported Assets/
+Lab_Final_GhostFarm/Assets/EmaceArt/
+Lab_Final_GhostFarm/Assets/EmaceArt.meta
+Lab_Final_GhostFarm/Assets/Trees Collection Asset PBR/
+Lab_Final_GhostFarm/Assets/Trees Collection Asset PBR.meta
+Lab_Final_GhostFarm/Assets/WeaponsAndPropsAssetPack_NAS/
+Lab_Final_GhostFarm/Assets/WeaponsAndPropsAssetPack_NAS.meta
+
+# incluidos por si acaso
+Lab_Final_GhostFarm/Assets/Materials/bricks.mat
+Lab_Final_GhostFarm/Assets/New Terrain.asset
+Lab_Final_GhostFarm/Assets/Scenes/SampleScene.unity
+Lab_Final_GhostFarm/Assets/Textures/NewLayer 1.terrainlayer
+Lab_Final_GhostFarm/Packages/manifest.json
+Lab_Final_GhostFarm/Packages/packages-lock.json
+Lab_Final_GhostFarm/ProjectSettings/GraphicsSettings.asset
+Lab_Final_GhostFarm/ProjectSettings/VFXManager.asset

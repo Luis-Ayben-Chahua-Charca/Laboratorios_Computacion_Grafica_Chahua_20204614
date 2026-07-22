@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.33
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.5754717, g: 0.32845318, b: 0.37427172, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f0ce679f6cd35d042bff2769843a1f6a, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.549
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -400,6 +400,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.071411
       objectReference: {fileID: 0}
@@ -539,6 +551,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,6 +781,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1150513
       objectReference: {fileID: 0}
@@ -880,6 +916,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be5677befda93a540aee89516fc89da0, type: 3}
   m_PrefabInstance: {fileID: 107386774}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &108675627
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 483.80862
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 69.99633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 762.5483
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
+      propertyPath: m_Name
+      value: cross
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d559fb1c1b27294992a331b364dc3da, type: 3}
 --- !u!1001 &108895410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1042,6 +1147,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1269,6 +1386,18 @@ PrefabInstance:
       value: EA03_Fence_VegetablePatch_02b_PRE (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.283142
       objectReference: {fileID: 0}
@@ -1318,11 +1447,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
   m_PrefabInstance: {fileID: 160542120}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &163638707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-  m_PrefabInstance: {fileID: 1330260925}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &165228027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,6 +1458,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1556,6 +1692,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.545624
       objectReference: {fileID: 0}
@@ -1695,75 +1843,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189663872}
   m_Mesh: {fileID: 3188950827135904563, guid: 5561e83d588453f4f9972f6c756b8c57, type: 3}
---- !u!1001 &189908305
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1434922980}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 63.344543
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.255398
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 120.45239
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.04039977
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9991836
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 184.631
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-      propertyPath: m_Name
-      value: coffin
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
 --- !u!1 &194340048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2219,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
       propertyPath: m_LocalPosition.x
       value: -527.1059
       objectReference: {fileID: 0}
@@ -2281,6 +2372,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: -510.59177
       objectReference: {fileID: 0}
@@ -2398,6 +2501,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2812,6 +2927,18 @@ PrefabInstance:
       value: EA03_Fence_VegetablePatch_01b_PRE (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.4844666
       objectReference: {fileID: 0}
@@ -2908,6 +3035,18 @@ PrefabInstance:
     - target: {fileID: 1020910651803554, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01b_PRE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3157,6 +3296,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.4492493
       objectReference: {fileID: 0}
@@ -3295,6 +3446,18 @@ PrefabInstance:
     - target: {fileID: 1901313304092854, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_End_01c_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3787,6 +3950,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -490.97263
       objectReference: {fileID: 0}
@@ -3841,6 +4016,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
   m_PrefabInstance: {fileID: 854772139}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &420685748
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 482.74686
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 64.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 751.01495
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5e76255d61991ff438235238ac22753d, type: 3}
+      propertyPath: m_Name
+      value: coffin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e76255d61991ff438235238ac22753d, type: 3}
 --- !u!4 &433588644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
@@ -3857,6 +4101,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3919,6 +4175,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3991,6 +4259,18 @@ PrefabInstance:
     - target: {fileID: 1672603834810542, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_End_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4188,6 +4468,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3781433
       objectReference: {fileID: 0}
@@ -4250,6 +4542,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 46.447052
       objectReference: {fileID: 0}
@@ -4305,6 +4609,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4364,6 +4680,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
       objectReference: {fileID: 0}
@@ -4419,6 +4747,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4566,6 +4906,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4842,6 +5194,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01d_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3974
       objectReference: {fileID: 0}
@@ -4902,6 +5266,18 @@ PrefabInstance:
     - target: {fileID: 1020910651803554, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4969,6 +5345,18 @@ PrefabInstance:
     - target: {fileID: 1020910651803554, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01b_PRE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5108,6 +5496,18 @@ PrefabInstance:
     - target: {fileID: 1704755379065362, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_End_01a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5258,6 +5658,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -515.6185
       objectReference: {fileID: 0}
@@ -5313,6 +5725,18 @@ PrefabInstance:
     - target: {fileID: 1179039965422370, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01d_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5611,6 +6035,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5940,6 +6376,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: -476.3829
       objectReference: {fileID: 0}
@@ -6152,6 +6600,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6470,6 +6930,18 @@ PrefabInstance:
     - target: {fileID: 1812887628484104, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Corner_01a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6941,6 +7413,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -478.97757
       objectReference: {fileID: 0}
@@ -7150,6 +7634,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (19)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.13
       objectReference: {fileID: 0}
@@ -7244,6 +7740,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (25)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -66.45
       objectReference: {fileID: 0}
@@ -7304,6 +7812,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7410,6 +7930,18 @@ PrefabInstance:
     - target: {fileID: 1494863540043716, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_VegetablePatch_01b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7564,6 +8096,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01c_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
       propertyPath: m_LocalPosition.x
       value: -467.6697
       objectReference: {fileID: 0}
@@ -7703,6 +8247,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01b_PRE (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.598236
       objectReference: {fileID: 0}
@@ -7758,6 +8314,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7820,6 +8388,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7982,6 +8562,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8276,6 +8868,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4696045
       objectReference: {fileID: 0}
@@ -8331,6 +8935,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8494,6 +9110,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01b_PRE (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.210052
       objectReference: {fileID: 0}
@@ -8549,6 +9177,18 @@ PrefabInstance:
     - target: {fileID: 1672603834810542, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_End_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8659,6 +9299,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.73999
       objectReference: {fileID: 0}
@@ -8721,6 +9373,18 @@ PrefabInstance:
       value: EA03_Fence_VegetablePatch_02b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.735626
       objectReference: {fileID: 0}
@@ -8781,6 +9445,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8944,6 +9620,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835042717768478, guid: 3db120a6c4288974c99d5e60c01fff6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 53.155853
       objectReference: {fileID: 0}
@@ -8999,6 +9687,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9063,6 +9763,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -523.6545
       objectReference: {fileID: 0}
@@ -9123,6 +9835,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9430,6 +10154,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2914124
       objectReference: {fileID: 0}
@@ -9492,6 +10228,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.699905
       objectReference: {fileID: 0}
@@ -9547,6 +10295,18 @@ PrefabInstance:
     - target: {fileID: 1672603834810542, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_End_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9647,6 +10407,18 @@ PrefabInstance:
     - target: {fileID: 1574477519385752, guid: 4c5950e61d620d34c9aefa01162245fa, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_VegetablePatch_Seam_02c_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4899642693479948, guid: 4c5950e61d620d34c9aefa01162245fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4899642693479948, guid: 4c5950e61d620d34c9aefa01162245fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4899642693479948, guid: 4c5950e61d620d34c9aefa01162245fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4899642693479948, guid: 4c5950e61d620d34c9aefa01162245fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10483,6 +11255,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: -526.4026
       objectReference: {fileID: 0}
@@ -10560,6 +11344,18 @@ PrefabInstance:
     - target: {fileID: 4042974472145502, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.11223895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10813,6 +11609,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (26)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -76.64
       objectReference: {fileID: 0}
@@ -10875,6 +11683,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01a_PRE (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62.266144
       objectReference: {fileID: 0}
@@ -10930,6 +11750,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11082,6 +11914,18 @@ PrefabInstance:
     - target: {fileID: 1672603834810542, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_End_01b_PRE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11441,11 +12285,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
   m_PrefabInstance: {fileID: 1951686908}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1299010987 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e803bb98c22caf4790f15ae9160d580, type: 3}
-  m_PrefabInstance: {fileID: 189908305}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1300000779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
@@ -11462,6 +12301,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11531,6 +12382,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (19)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.292633
       objectReference: {fileID: 0}
@@ -11596,6 +12459,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11737,63 +12612,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325786278}
   m_Mesh: {fileID: 3188950827135904563, guid: 5561e83d588453f4f9972f6c756b8c57, type: 3}
---- !u!1001 &1330260925
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1434922980}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 45.728302
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.3805847
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 127.53418
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
-      propertyPath: m_Name
-      value: rocks
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e87dcf57c6d79f4eacfb94a0edfe564, type: 3}
 --- !u!4 &1332591421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4511736190874914, guid: 1b82d12825a49014ba9ea9926aa4061a, type: 3}
@@ -11902,6 +12720,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: -488.0034
       objectReference: {fileID: 0}
@@ -11957,6 +12787,18 @@ PrefabInstance:
     - target: {fileID: 1812887628484104, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Corner_01a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12086,6 +12928,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (18)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.99
       objectReference: {fileID: 0}
@@ -12146,6 +13000,18 @@ PrefabInstance:
     - target: {fileID: 1812887628484104, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Corner_01a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4260368000756934, guid: 57fa5cfc101a2df49993e38f25ead2b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12298,6 +13164,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12601,6 +13479,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.671051
       objectReference: {fileID: 0}
@@ -12887,10 +13777,7 @@ Transform:
   m_LocalPosition: {x: 419.14545, y: 74.9954, z: 629.1676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2076640618}
-  - {fileID: 163638707}
-  - {fileID: 1299010987}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457793566
@@ -12992,6 +13879,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13254,6 +14153,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -471.00418
       objectReference: {fileID: 0}
@@ -13401,6 +14312,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.613373
       objectReference: {fileID: 0}
@@ -13461,6 +14384,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13606,6 +14541,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.764496
       objectReference: {fileID: 0}
@@ -13688,6 +14635,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13959,6 +14918,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (16)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.575928
       objectReference: {fileID: 0}
@@ -14019,6 +14990,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14083,6 +15066,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.391205
       objectReference: {fileID: 0}
@@ -14138,6 +15133,18 @@ PrefabInstance:
     - target: {fileID: 1230455590240864, guid: ff3ab8ddfca0ac5479075add486d1aff, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Corner_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273035998516238, guid: ff3ab8ddfca0ac5479075add486d1aff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273035998516238, guid: ff3ab8ddfca0ac5479075add486d1aff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273035998516238, guid: ff3ab8ddfca0ac5479075add486d1aff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4273035998516238, guid: ff3ab8ddfca0ac5479075add486d1aff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14281,6 +15288,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14435,6 +15454,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (18)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.630859
       objectReference: {fileID: 0}
@@ -14500,6 +15531,18 @@ PrefabInstance:
     - target: {fileID: 1020910651803554, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01b_PRE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14633,6 +15676,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2304077
       objectReference: {fileID: 0}
@@ -14715,6 +15770,18 @@ PrefabInstance:
     - target: {fileID: 1179039965422370, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01d_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14892,6 +15959,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (17)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.62143
       objectReference: {fileID: 0}
@@ -14952,6 +16031,18 @@ PrefabInstance:
     - target: {fileID: 1020910651803554, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15300,6 +16391,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15740,6 +16843,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.147064
       objectReference: {fileID: 0}
@@ -15784,75 +16899,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
---- !u!1001 &1746655128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1434922980}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 64.23456
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.999069
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 134.32239
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-      propertyPath: m_Name
-      value: cross
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
 --- !u!4 &1761875383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4294944410208888, guid: 494912e287edfbc4098aaba2d50b82fa, type: 3}
@@ -15869,6 +16915,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16034,6 +17092,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.07608
       objectReference: {fileID: 0}
@@ -16123,6 +17193,18 @@ PrefabInstance:
       value: EA03_Fence_VegetablePatch_Seam_02a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4638297120358898, guid: e33c3be32451a6144bbe8f045dac7528, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638297120358898, guid: e33c3be32451a6144bbe8f045dac7528, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638297120358898, guid: e33c3be32451a6144bbe8f045dac7528, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638297120358898, guid: e33c3be32451a6144bbe8f045dac7528, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4517212
       objectReference: {fileID: 0}
@@ -16190,6 +17272,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01c_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978329185339462, guid: 46caf75be9f23fa4aadad817f5c31363, type: 3}
       propertyPath: m_LocalPosition.x
       value: -486.81885
       objectReference: {fileID: 0}
@@ -16255,6 +17349,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16585,6 +17691,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.788603
       objectReference: {fileID: 0}
@@ -16690,6 +17808,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16963,6 +18093,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (24)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.18
       objectReference: {fileID: 0}
@@ -17025,6 +18167,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_01b_PRE (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.230713
       objectReference: {fileID: 0}
@@ -17085,6 +18239,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17255,6 +18421,18 @@ PrefabInstance:
       value: EA03_Fence_VegetablePatch_01b_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1531982
       objectReference: {fileID: 0}
@@ -17320,6 +18498,18 @@ PrefabInstance:
     - target: {fileID: 1591216876603756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01a_PRE (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17663,6 +18853,18 @@ PrefabInstance:
       value: EA03_Fence_VegetablePatch_02b_PRE (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.0920715
       objectReference: {fileID: 0}
@@ -17723,6 +18925,18 @@ PrefabInstance:
     - target: {fileID: 1020910651803554, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_Seam_01b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17809,6 +19023,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.459198
       objectReference: {fileID: 0}
@@ -17868,6 +19094,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17957,6 +19195,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18063,6 +19313,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_End_01a_PRE
       objectReference: {fileID: 0}
     - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159922321307632, guid: df5a0e491576a0a49b2840cf1e111294, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.316742
       objectReference: {fileID: 0}
@@ -18118,6 +19380,18 @@ PrefabInstance:
     - target: {fileID: 1718716774539650, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_VegetablePatch_02b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4657803047707658, guid: d4520d8f1d45ac545bd0351e8bdc6a14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18350,6 +19624,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01b_PRE (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847892536227332, guid: b7e52ce553e786c438cd37fa92473e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2453613
       objectReference: {fileID: 0}
@@ -18410,6 +19696,18 @@ PrefabInstance:
     - target: {fileID: 1675255010988276, guid: 093bea842f08a4d4380a256a1079996e, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_VegetablePatch_01a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538355537112108, guid: 093bea842f08a4d4380a256a1079996e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538355537112108, guid: 093bea842f08a4d4380a256a1079996e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538355537112108, guid: 093bea842f08a4d4380a256a1079996e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4538355537112108, guid: 093bea842f08a4d4380a256a1079996e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18479,6 +19777,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -475.89606
       objectReference: {fileID: 0}
@@ -18536,6 +19846,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -482.44983
       objectReference: {fileID: 0}
@@ -18580,11 +19902,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
---- !u!4 &2076640618 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f462036347eb36540bd7f403ee0c5730, type: 3}
-  m_PrefabInstance: {fileID: 1746655128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2098565746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18596,6 +19913,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18660,6 +19989,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2806091
       objectReference: {fileID: 0}
@@ -18715,6 +20056,18 @@ PrefabInstance:
     - target: {fileID: 1797415221198528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_Cobble_01b_PRE (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4464005412946528, guid: f16024fa2379f1c498acbd0c8d882355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18777,6 +20130,18 @@ PrefabInstance:
     - target: {fileID: 1494863540043716, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
       propertyPath: m_Name
       value: EA03_Fence_VegetablePatch_01b_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4092444812038158, guid: 053b22ea9e56b9148bea6ba65d1629db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19059,6 +20424,18 @@ PrefabInstance:
       value: EA03_Fence_Cobble_Seam_01a_PRE (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693883427644756, guid: 874ae578f0b94584d80e03cdca139446, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.609207
       objectReference: {fileID: 0}
@@ -19213,3 +20590,5 @@ SceneRoots:
   - {fileID: 1700720318}
   - {fileID: 1144924268}
   - {fileID: 1353140960}
+  - {fileID: 108675627}
+  - {fileID: 420685748}
