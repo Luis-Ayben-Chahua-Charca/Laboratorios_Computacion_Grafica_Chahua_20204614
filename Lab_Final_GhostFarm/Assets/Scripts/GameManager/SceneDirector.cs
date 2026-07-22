@@ -53,6 +53,7 @@ public class SceneDirector : MonoBehaviour
 
         hud.SetMisionesVisible(nuevoEstado != EstadoJuego.Cinematica);
         hud.SetItemVisible(jugadorTieneControl);
+        hud.SetCrosshairForzado(nuevoEstado != EstadoJuego.ExploracionLibre);
     }
 
     public void Pausar() => CambiarEstado(EstadoJuego.Pausado);

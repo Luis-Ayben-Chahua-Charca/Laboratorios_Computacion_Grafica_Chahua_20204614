@@ -7,6 +7,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private KeyCode teclaInteractuar = KeyCode.E;
 
     private IInteractable actual;
+    public IInteractable Actual => actual; // <- esta es la línea que probablemente falta
 
     void Update()
     {
@@ -20,7 +21,12 @@ public class Interactor : MonoBehaviour
     void DetectarInteractuable()
     {
         actual = null;
+        Debug.DrawRay(origenRaycast.position, origenRaycast.forward * distanciaInteraccion, Color.red);
+
         if (Physics.Raycast(origenRaycast.position, origenRaycast.forward, out RaycastHit hit, distanciaInteraccion))
-            actual = hit.collider.GetComponent<IInteractable>();
+        {
+            Debug.Log("Rayo golpeó: " + hit.collider.name);
+            actual = hit.collider.GetComponentInParent<IInteractable>();
+        }
     }
 }
