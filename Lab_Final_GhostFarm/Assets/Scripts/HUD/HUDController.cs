@@ -132,4 +132,10 @@ public class HUDController : MonoBehaviour
             fila.GetComponentInChildren<TMP_Text>().text = $"- {texto}";
     }
 
+    public void EscalarFilaAPrincipal(string id)
+    {
+        if (!filas.TryGetValue(id, out GameObject fila)) return;
+        fila.transform.SetParent(contenedorPrincipales, false);
+        fila.GetComponentInChildren<TMP_Text>().color = Color.red;
+    }
 }

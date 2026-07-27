@@ -6421,7 +6421,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 10
   blendDistance: 0
-  weight: 1
+  weight: 0
   sharedProfile: {fileID: 11400000, guid: c1c715bb15040a8448ea27c116733852, type: 2}
 --- !u!4 &732619984
 Transform:
@@ -12590,6 +12590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ecf81f0edc9974cbcc4454bd1c5c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CampoAlfalfa
+  objetivoCorte: 5
 --- !u!1 &1434922979
 GameObject:
   m_ObjectHideFlags: 0
@@ -19227,6 +19228,10 @@ PrefabInstance:
       propertyPath: visualModeController
       value: 
       objectReference: {fileID: 9322392}
+    - target: {fileID: 3727887519496405040, guid: 04042d0f57152bf4bb9f33fcf429f191, type: 3}
+      propertyPath: distanciaInteraccion
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3932662716570552321, guid: 04042d0f57152bf4bb9f33fcf429f191, type: 3}
       propertyPath: m_LocalPosition.x
       value: 438.86813

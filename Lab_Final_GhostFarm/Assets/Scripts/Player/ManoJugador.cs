@@ -19,6 +19,9 @@ public class ManoJugador : MonoBehaviour
     {
         ObjetoActual = objeto;
         objeto.AlEquipar(puntoDeAgarre);
+
+        if (objeto.Nombre == "Hoz")
+            MisionManager.Instance.CompletarObjetivo("recoger_hoz");
     }
 
     public void Soltar()

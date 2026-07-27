@@ -8,6 +8,8 @@ public class ObjetoAgarrable : MonoBehaviour, IInteractable
     private Rigidbody rb;
     private Collider col;
 
+    public string Nombre => nombre;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();

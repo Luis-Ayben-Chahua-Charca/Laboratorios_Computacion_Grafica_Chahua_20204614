@@ -4,22 +4,30 @@ using UnityEngine;
 public class FlashbackTrigger : MonoBehaviour
 {
     [SerializeField] private FlashbackData data;
-    private bool yaSeActivo = false;
+    private bool activo = false;
 
     public void Disparar()
     {
-        if (yaSeActivo) return;
-        yaSeActivo = true;
-        StartCoroutine(EjecutarFlashback());
-    }
-
-    private IEnumerator EjecutarFlashback()
-    {
-        SceneDirector.Instance.IniciarFlashback();
+        if (activo) return;
+        activo = true;
+        SceneDirector.Instance.IniciarFlashback(data.mantenerControlJugador);
         VisualModeController.Instance.EntrarModoMemoria(false);
 
-        yield return new WaitForSeconds(data.duracion);
+        if (!data.salidaManual)
+            StartCoroutine(SalidaPorTiempo());
+    }
 
+    private IEnumerator SalidaPorTiempo()
+    {
+        yield return new WaitForSeconds(data.duracion);
+        Finalizar();
+    }
+
+    public void Finalizar()
+    {
+        if (!activo) return;
+        activo = false;
+        StopAllCoroutines();
         VisualModeController.Instance.SalirModoMemoria(false);
         SceneDirector.Instance.TerminarEvento();
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 public class MisionManager : MonoBehaviour
 {
     public static MisionManager Instance { get; private set; }
+    public static event System.Action<string> OnObjetivoCompletado;
+
     [SerializeField] private HUDController hud;
 
     private List<Objetivo> principales = new List<Objetivo>();
@@ -42,5 +44,16 @@ public class MisionManager : MonoBehaviour
 
         obj = secundarios.Find(o => o.id == id);
         if (obj != null) { obj.completado = true; hud.MarcarCompletado(id, esSecundario: true); }
+
+        OnObjetivoCompletado?.Invoke(id);
+    }
+
+    public void EscalarAPrincipal(string id)
+    {
+        var obj = secundarios.Find(o => o.id == id);
+        if (obj == null) return;
+        secundarios.Remove(obj);
+        principales.Add(obj);
+        hud.EscalarFilaAPrincipal(id);
     }
 }

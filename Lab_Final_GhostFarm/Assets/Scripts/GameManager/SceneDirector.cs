@@ -6,6 +6,9 @@ public class SceneDirector : MonoBehaviour
 {
     public static SceneDirector Instance { get; private set; }
 
+    public bool JugadorTieneControl { get; private set; }
+
+
     [Header("Referencias del jugador")]
     [SerializeField] private PlayerController playerController;
     [SerializeField] private FPSCameraController cameraController;
@@ -34,10 +37,11 @@ public class SceneDirector : MonoBehaviour
         }
     }
 
-    public void CambiarEstado(EstadoJuego nuevoEstado)
+    public void CambiarEstado(EstadoJuego nuevoEstado, bool mantenerControlJugador = false)
     {
         EstadoActual = nuevoEstado;
-        bool jugadorTieneControl = nuevoEstado == EstadoJuego.ExploracionLibre;
+        bool jugadorTieneControl = (nuevoEstado == EstadoJuego.ExploracionLibre) || mantenerControlJugador;
+        JugadorTieneControl = jugadorTieneControl;
 
         playerController.enabled = jugadorTieneControl;
         cameraController.enabled = jugadorTieneControl;
@@ -53,13 +57,14 @@ public class SceneDirector : MonoBehaviour
 
         hud.SetMisionesVisible(nuevoEstado != EstadoJuego.Cinematica);
         hud.SetItemVisible(jugadorTieneControl);
-        hud.SetCrosshairForzado(nuevoEstado != EstadoJuego.ExploracionLibre);
+        hud.SetCrosshairForzado(!jugadorTieneControl);
     }
+
 
     public void Pausar() => CambiarEstado(EstadoJuego.Pausado);
     public void Reanudar() => CambiarEstado(EstadoJuego.ExploracionLibre);
     public void IniciarCinematica() => CambiarEstado(EstadoJuego.Cinematica);
-    public void IniciarFlashback() => CambiarEstado(EstadoJuego.Flashback);
+    public void IniciarFlashback(bool mantenerControl = false) => CambiarEstado(EstadoJuego.Flashback, mantenerControl);
     public void TerminarEvento() => CambiarEstado(EstadoJuego.ExploracionLibre);
 
     public void IrAlMenuPrincipal()
