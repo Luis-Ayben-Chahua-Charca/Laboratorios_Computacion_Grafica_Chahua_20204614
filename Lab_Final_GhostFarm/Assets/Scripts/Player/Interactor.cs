@@ -25,7 +25,7 @@ public class Interactor : MonoBehaviour
 
         if (Physics.Raycast(origenRaycast.position, origenRaycast.forward, out RaycastHit hit, distanciaInteraccion))
         {
-            Debug.Log("Rayo golpeó: " + hit.collider.name);
+            //Debug.Log("Rayo golpeó: " + hit.collider.name);
             actual = hit.collider.GetComponentInParent<IInteractable>();
         }
     }

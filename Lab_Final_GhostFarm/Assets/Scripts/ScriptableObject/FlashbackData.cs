@@ -1,0 +1,9 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "NuevoFlashback", menuName = "Granja/FlashbackData")]
+public class FlashbackData : ScriptableObject
+{
+    public string idFlashback;
+    public float duracion = 5f;
+    public bool mantenerControlJugador = false;
+}

@@ -65,4 +65,5 @@ public class PlayerController : MonoBehaviour
             currentMovement.y -= gravity * Time.deltaTime; // Apply gravity when in the air
         }
     }
+
 }

@@ -3,22 +3,26 @@ using UnityEngine;
 
 public class CampoAlfalfa : MonoBehaviour
 {
+    private const string idMision = "cortar_alfalfa";
     private List<AlfalfaMechon> mechones = new List<AlfalfaMechon>();
     private int cortados = 0;
 
     void Start()
     {
         mechones.AddRange(GetComponentsInChildren<AlfalfaMechon>());
-        MisionManager.Instance.SetTarea($"Cortar alfalfa (0/{mechones.Count})"); // <- acá arranca la misión
+        MisionManager.Instance.IniciarMisionPrincipal(new List<Objetivo> {
+            new Objetivo { id = idMision, descripcion = $"Cortar avena (0/{mechones.Count})" }
+        });
     }
 
     public void ReportarCorte()
     {
         cortados++;
-        MisionManager.Instance.SetTarea($"Cortar alfalfa ({cortados}/{mechones.Count})"); // <- acá se actualiza
-        InventarioRecursos.Instance.Agregar("Alfalfa"); // <- acá se suma al inventario
+        InventarioRecursos.Instance.Agregar("Avena");
 
         if (cortados >= mechones.Count)
-            MisionManager.Instance.LimpiarTarea(); // opcional: acá dispararías la próxima tarea
+            MisionManager.Instance.CompletarObjetivo(idMision);
+        else
+            MisionManager.Instance.ActualizarDescripcion(idMision, $"Cortar avena ({cortados}/{mechones.Count})");
     }
 }

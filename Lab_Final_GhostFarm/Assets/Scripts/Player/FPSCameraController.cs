@@ -10,11 +10,15 @@ public class FPSCameraController : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float maxVerticalAngle = 80f;
 
+    [Header ("Positions Camera")]
+    private float alturaOriginalY;
+
+
     private float verticalRotation = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        alturaOriginalY = cameraPivot.localPosition.y;
     }
 
     // Update is called once per frame
@@ -34,5 +38,12 @@ public class FPSCameraController : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -maxVerticalAngle, maxVerticalAngle);
         cameraPivot.localRotation =
            Quaternion.Euler(verticalRotation, 0f, 0f);
+    }
+
+    public void SetOffsetAltura(float offset)
+    {
+        Vector3 pos = cameraPivot.localPosition;
+        pos.y = alturaOriginalY + offset;
+        cameraPivot.localPosition = pos;
     }
 }
