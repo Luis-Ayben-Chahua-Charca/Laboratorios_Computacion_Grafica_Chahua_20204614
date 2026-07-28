@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Flashback_AvenaNIno
   m_EditorClassIdentifier: Assembly-CSharp::FlashbackData
   idFlashback: 1
-  duracion: 5
+  duracion: 1
   mantenerControlJugador: 1
   salidaManual: 1
+  dialogoInicial: {fileID: 11400000, guid: 75fcd9d7472676444b8ee83ae138ff6a, type: 2}

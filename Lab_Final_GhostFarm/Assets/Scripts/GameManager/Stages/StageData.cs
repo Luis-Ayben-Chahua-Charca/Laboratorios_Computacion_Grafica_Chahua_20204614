@@ -4,15 +4,29 @@ using UnityEngine;
 [System.Serializable]
 public class ObjetivoInicial
 {
-    public string id;
+    public MisionId id;
     public string descripcion;
 }
 
 [System.Serializable]
 public class ItemInicial
 {
-    public string tipo;
+    public TipoRecurso tipo;
     public int cantidad;
+}
+
+// NUEVO: agrupar el progreso de la escena de Avena en su propia clase
+// (en vez de campos sueltos directo en StageData) hace que, cuando sumes
+// ProgresoCerca / ProgresoCocina / ProgresoLampara más adelante, el
+// Inspector se mantenga ordenado por secciones plegables, y cada sistema
+// de escena solo necesita mirar su propio bloque.
+[System.Serializable]
+public class ProgresoAvena
+{
+    public bool jugadorTieneHoz = false;
+    public int cortadosMedio = 0;
+    public int corregidosParejo = 0;
+    public bool misionSecundariaActiva = false;
 }
 
 [CreateAssetMenu(fileName = "NuevaEtapa", menuName = "Granja/Stage Data")]
@@ -36,13 +50,10 @@ public class StageData : ScriptableObject
     public List<ItemInicial> itemsIniciales = new List<ItemInicial>();
 
     [Header("Progreso específico — Escena de Avena")]
-    public bool jugadorTieneHoz = false;
-    public int avenaCortadosMedio = 0;
-    public int avenaCorregidosParejo = 0;
-    public bool avenaMisionSecundariaActiva = false;
+    public ProgresoAvena avena = new ProgresoAvena();
 
     // A futuro: cuando armes la escena de la cerca/cocina/lámpara, sumás acá
-    // un bloque [Header("Progreso específico — Cerca")] con sus propios campos,
-    // siguiendo el mismo patrón. StageLoader.CargarEtapa() es el único lugar
-    // que necesita enterarse de los campos nuevos.
+    // un campo "public ProgresoCerca cerca = new ProgresoCerca();" siguiendo
+    // el mismo patrón. StageLoader no necesita tocarse — el sistema nuevo
+    // (ej. CampoCerca) implementa IEstadoDebug y lee etapa.cerca por su cuenta.
 }

@@ -3,6 +3,6 @@ using UnityEngine;
 [System.Serializable]
 public class IconoRecurso
 {
-    public string tipo;
+    public TipoRecurso tipo;
     public Sprite icono;
 }

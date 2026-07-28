@@ -6,7 +6,7 @@ public class FlujoDia1 : MonoBehaviour
     void Start()
     {
         MisionManager.Instance.IniciarMisionPrincipal(new List<Objetivo> {
-            new Objetivo { id = MisionIds.RecogerHoz, descripcion = "Recoger la hoz" }
+            new Objetivo { id = MisionId.RecogerHoz, descripcion = "Recoger la hoz" }
         });
     }
 }

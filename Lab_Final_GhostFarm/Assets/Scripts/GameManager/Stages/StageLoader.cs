@@ -24,10 +24,6 @@ public class StageLoader : MonoBehaviour
 
     void Update()
     {
-        // FIX/NOTA: esto queda encerrado en la directiva de compilación para
-        // que el salto de etapas nunca esté disponible en un build final —
-        // solo en el Editor o en builds de desarrollo (Development Build
-        // tildado al compilar). No hace falta sacarlo antes de entregar.
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         for (int i = 0; i < etapas.Length && i < 9; i++)
         {
@@ -56,11 +52,31 @@ public class StageLoader : MonoBehaviour
         foreach (var item in etapa.itemsIniciales)
             InventarioRecursos.Instance.ForzarCantidad(item.tipo, item.cantidad);
 
-        if (etapa.jugadorTieneHoz && hozEnEscena != null)
-            manoJugador.EquiparSilencioso(hozEnEscena);
+        // FIX: antes solo se sabía EQUIPAR la hoz (jugadorTieneHoz = true).
+        // Si veníamos de otra etapa donde el jugador la tenía en mano y
+        // saltábamos a una etapa con jugadorTieneHoz = false, se quedaba
+        // pegada a la cámara para siempre — nada la soltaba. Ahora el "false"
+        // también se maneja explícitamente.
+        if (etapa.avena.jugadorTieneHoz)
+        {
+            if (hozEnEscena != null) manoJugador.EquiparSilencioso(hozEnEscena);
+        }
+        else
+        {
+            manoJugador.SoltarSilencioso();
+        }
 
-        if (CampoAvena.Instance != null)
-            CampoAvena.Instance.ForzarEstadoDebug(etapa.avenaCortadosMedio, etapa.avenaMisionSecundariaActiva, etapa.avenaCorregidosParejo);
+        // FIX: antes esto llamaba a CampoAvena.Instance.ForzarEstadoDebug(...)
+        // por nombre, con 3 parámetros sueltos que había que mantener
+        // sincronizados con el StageData a mano. Ahora se busca cualquier
+        // componente que implemente IEstadoDebug (sin importar de qué clase
+        // sea) y se le pasa la etapa completa — cada sistema de escena nuevo
+        // (cerca, cocina, lámpara...) solo necesita implementar la interfaz,
+        // sin que este archivo vuelva a crecer.
+        var sistemasDebug = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include)
+            .OfType<IEstadoDebug>();
+        foreach (var sistema in sistemasDebug)
+            sistema.AplicarEstadoDebug(etapa);
 
         // Por si el salto se dispara estando pausado o en cinemática.
         SceneDirector.Instance.TerminarEvento();
@@ -68,11 +84,6 @@ public class StageLoader : MonoBehaviour
 
     private void TeleportarJugador(Vector3 posicion, Vector3 rotacionEuler)
     {
-        // FIX: un CharacterController tiene su propia física interna; asignar
-        // transform.position directamente mientras está habilitado puede
-        // generar colisiones raras o que la próxima llamada a Move() lo
-        // "corrija" de vuelta. Apagarlo, mover, y reencenderlo es el patrón
-        // seguro recomendado por Unity para teletransportar un CharacterController.
         controladorJugador.enabled = false;
         jugador.position = posicion;
         jugador.rotation = Quaternion.Euler(rotacionEuler);

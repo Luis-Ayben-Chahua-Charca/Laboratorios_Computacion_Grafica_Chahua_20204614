@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CampoAvena : MonoBehaviour
+public class CampoAvena : MonoBehaviour, IEstadoDebug
 {
-    // NUEVO: singleton, siguiendo el mismo patrón que SceneDirector,
-    // MisionManager, InventarioRecursos, etc. Necesario para que StageLoader
-    // pueda encontrarlo sin depender de FindObjectOfType.
     public static CampoAvena Instance { get; private set; }
 
-    private const string idMisionPrincipal = "cortar_avena";
-    private const string idMisionSecundaria = "cortar_parejo";
+    private const MisionId idMisionPrincipal = MisionId.CortarAvena;
+    private const MisionId idMisionSecundaria = MisionId.CortarParejo;
 
     [SerializeField] private int objetivoCorte = 5;
+
+    [Header("Diálogo al completar el corte principal (opcional)")]
+    [SerializeField] private DialogoData dialogoAlCompletar;
 
     private List<AvenaMechon> mechones = new List<AvenaMechon>();
     private FlashbackTrigger flashbackPrimerCorte;
@@ -35,9 +35,9 @@ public class CampoAvena : MonoBehaviour
     void OnEnable() => MisionManager.OnObjetivoCompletado += HandleObjetivoCompletado;
     void OnDisable() => MisionManager.OnObjetivoCompletado -= HandleObjetivoCompletado;
 
-    void HandleObjetivoCompletado(string id)
+    void HandleObjetivoCompletado(MisionId id)
     {
-        if (id == "recoger_hoz") IniciarMision();
+        if (id == MisionId.RecogerHoz) IniciarMision();
     }
     public void IniciarMision()
     {
@@ -47,19 +47,14 @@ public class CampoAvena : MonoBehaviour
     }
     public void ReportarCorte()
     {
-        // FIX: sin este guard, cortar mechones más allá del objetivo (6to, 7mo...)
-        // volvía a entrar en el bloque de abajo cada vez, re-llamando a
-        // IniciarMisionSecundaria() y generando objetivos "cortar_parejo"
-        // duplicados. El jugador puede seguir cortando avena de más (se ve y
-        // se siente bien), simplemente ya no cuenta para la misión.
         if (cortadosMedio >= objetivoCorte)
         {
-            InventarioRecursos.Instance.Agregar("Avena");
+            InventarioRecursos.Instance.Agregar(TipoRecurso.Avena);
             return;
         }
 
         cortadosMedio++;
-        InventarioRecursos.Instance.Agregar("Avena");
+        InventarioRecursos.Instance.Agregar(TipoRecurso.Avena);
 
         if (cortadosMedio == 1)
             flashbackPrimerCorte.Disparar();
@@ -67,8 +62,14 @@ public class CampoAvena : MonoBehaviour
         if (cortadosMedio >= objetivoCorte)
         {
             MisionManager.Instance.CompletarObjetivo(idMisionPrincipal);
-            flashbackPrimerCorte.Finalizar(); //  acá sale del recuerdo, no por tiempo
-            IniciarMisionSecundaria();
+            flashbackPrimerCorte.Finalizar();
+
+            // NUEVO: antes esto llamaba a IniciarMisionSecundaria() directo.
+            // Ahora, si hay un diálogo asignado, se muestra primero (esperando
+            // Espacio) y la secundaria recién aparece cuando el diálogo
+            // termina. Si dialogoAlCompletar es null, DialogoController llama
+            // al callback de inmediato — mismo comportamiento que antes.
+            DialogoController.Instance.MostrarDialogo(dialogoAlCompletar, IniciarMisionSecundaria);
         }
         else
         {
@@ -87,10 +88,6 @@ public class CampoAvena : MonoBehaviour
     }
     public void ReportarCorteParejo()
     {
-        // FIX: mismo problema — emparejar mechones cortados de más (fuera de
-        // los 5 contados) seguía sumando a corregidosParejo contra un
-        // cortadosMedio que ya no representaba el objetivo real, y volvía a
-        // llamar CompletarObjetivo sobre una misión ya completada.
         if (!misionSecundariaActiva || MisionSecundariaCompleta()) return;
 
         corregidosParejo++;
@@ -108,15 +105,13 @@ public class CampoAvena : MonoBehaviour
         MisionManager.Instance.EscalarAPrincipal(idMisionSecundaria);
     }
 
-    // NUEVO: usado por StageLoader para saltar directo a un progreso de
-    // corte específico, sin jugar el flujo real. Fija las cuentas internas Y
-    // actualiza el visual de los mechones correspondientes (los primeros N
-    // como ya cortados), para que el campo se vea consistente con la etapa.
-    public void ForzarEstadoDebug(int cortadosMedioObjetivo, bool misionSecundariaActivaObjetivo, int corregidosParejoObjetivo)
+    public void AplicarEstadoDebug(StageData etapa)
     {
-        cortadosMedio = Mathf.Clamp(cortadosMedioObjetivo, 0, objetivoCorte);
-        misionSecundariaActiva = misionSecundariaActivaObjetivo;
-        corregidosParejo = Mathf.Clamp(corregidosParejoObjetivo, 0, cortadosMedio);
+        var progreso = etapa.avena;
+
+        cortadosMedio = Mathf.Clamp(progreso.cortadosMedio, 0, objetivoCorte);
+        misionSecundariaActiva = progreso.misionSecundariaActiva;
+        corregidosParejo = Mathf.Clamp(progreso.corregidosParejo, 0, cortadosMedio);
 
         for (int i = 0; i < mechones.Count; i++)
         {
@@ -124,5 +119,20 @@ public class CampoAvena : MonoBehaviour
             bool yaParejo = i < corregidosParejo;
             mechones[i].ForzarEstadoDebug(yaParejo ? EstadoMechon.CortadoParejo : EstadoMechon.CortadoMedio);
         }
+
+        // NUEVO: en vez de depender de que quien arma el StageData tipee a
+        // mano un texto de descripción que coincida con el que generaría el
+        // juego real (ej. "Cortar avena (3/5)"), recalculamos acá con el
+        // mismo formato exacto que usa ReportarCorte/ReportarCorteParejo.
+        // Esto hace que el campo "descripcion" de esas entradas en el
+        // StageData sea puramente cosmético/ignorable para estas dos
+        // misiones puntuales — StageLoader ya creó la fila con ForzarEstado
+        // antes de llegar acá, así que ActualizarDescripcion la encuentra y
+        // la corrige con el valor real.
+        if (cortadosMedio < objetivoCorte)
+            MisionManager.Instance.ActualizarDescripcion(idMisionPrincipal, $"Cortar avena ({cortadosMedio}/{objetivoCorte})");
+
+        if (misionSecundariaActiva)
+            MisionManager.Instance.ActualizarDescripcion(idMisionSecundaria, $"Cortar parejo ({corregidosParejo}/{cortadosMedio})");
     }
 }

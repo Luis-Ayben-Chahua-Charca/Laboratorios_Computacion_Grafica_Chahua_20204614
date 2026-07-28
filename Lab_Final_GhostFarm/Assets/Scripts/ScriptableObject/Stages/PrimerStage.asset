@@ -16,10 +16,17 @@ MonoBehaviour:
   posicionJugador: {x: 489.64697, y: 61.00531, z: 586.4384}
   rotacionJugadorEuler: {x: 0, y: -61.872, z: 0}
   condicionCielo: 0
-  misionesPrincipales: []
+  misionesPrincipales:
+  - id: 0
+    descripcion: Recoge la Hoz
   misionesSecundarias: []
-  itemsIniciales: []
-  jugadorTieneHoz: 0
-  avenaCortadosMedio: 0
-  avenaCorregidosParejo: 0
-  avenaMisionSecundariaActiva: 0
+  itemsIniciales:
+  - tipo: 0
+    cantidad: 0
+  - tipo: 1
+    cantidad: 0
+  avena:
+    jugadorTieneHoz: 0
+    cortadosMedio: 0
+    corregidosParejo: 0
+    misionSecundariaActiva: 0

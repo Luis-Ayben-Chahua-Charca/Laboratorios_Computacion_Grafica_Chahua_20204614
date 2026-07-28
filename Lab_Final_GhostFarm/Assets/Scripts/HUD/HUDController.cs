@@ -25,21 +25,16 @@ public class HUDController : MonoBehaviour
     [Header("Crosshair")]
     [SerializeField] private CrosshairUI crosshair;
 
-    private Dictionary<string, GameObject> filas = new Dictionary<string, GameObject>();
+    // FIX: antes era Dictionary<string, GameObject>. Con MisionId como enum,
+    // la clave ahora es MisionId — más seguro, sin typos posibles.
+    private Dictionary<MisionId, GameObject> filas = new Dictionary<MisionId, GameObject>();
 
-    private Dictionary<string, SlotItemUI> slotsActivos = new Dictionary<string, SlotItemUI>();
+    private Dictionary<TipoRecurso, SlotItemUI> slotsActivos = new Dictionary<TipoRecurso, SlotItemUI>();
 
-    // FIX: filas que están actualmente desvaneciéndose (fade-out tras completarse).
-    // RenderizarPrincipales no debe destruirlas de golpe: si lo hace, la corrutina
-    // DesvanecerYQuitar se despierta después con una referencia ya destruida y
-    // tira MissingReferenceException.
     private HashSet<GameObject> filasEnDesvanecimiento = new HashSet<GameObject>();
 
     void Awake() => ActualizarVisibilidadOpcional();
 
-    // FIX: la etiqueta "Opcional" solo debe verse mientras haya al menos una
-    // misión secundaria activa. Se llama cada vez que contenedorSecundarios
-    // gana o pierde un hijo (agregar, escalar a principal, o desvanecerse tras completarse).
     private void ActualizarVisibilidadOpcional()
     {
         if (etiquetaOpcional != null)
@@ -69,10 +64,6 @@ public class HUDController : MonoBehaviour
 
     public void RenderizarPrincipales(List<Objetivo> objetivos)
     {
-        // FIX: antes esto destruía TODOS los hijos de contenedorPrincipales sin
-        // excepción, incluida cualquier fila que en ese mismo frame estuviera
-        // en medio de su fade-out de "completado" (ver filasEnDesvanecimiento).
-        // Esas filas se autodestruyen solas al terminar su corrutina.
         foreach (Transform hijo in contenedorPrincipales)
         {
             if (filasEnDesvanecimiento.Contains(hijo.gameObject)) continue;
@@ -87,9 +78,6 @@ public class HUDController : MonoBehaviour
         }
     }
 
-    // NUEVO: simétrico a RenderizarPrincipales, pero para la lista de
-    // secundarios. Usado por MisionManager.ForzarEstado (salto de etapas) —
-    // el flujo normal del juego sigue usando AgregarFilaSecundaria de a una.
     public void RenderizarSecundarios(List<Objetivo> objetivos)
     {
         foreach (Transform hijo in contenedorSecundarios)
@@ -116,7 +104,7 @@ public class HUDController : MonoBehaviour
         ActualizarVisibilidadOpcional();
     }
 
-    public void MarcarCompletado(string id, bool esSecundario)
+    public void MarcarCompletado(MisionId id, bool esSecundario)
     {
         if (!filas.TryGetValue(id, out GameObject fila)) return;
         var texto = fila.GetComponentInChildren<TMP_Text>();
@@ -129,10 +117,6 @@ public class HUDController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        // FIX: si otra cosa ya destruyó esta fila mientras esperábamos
-        // (por ejemplo un RenderizarPrincipales de una versión vieja del script,
-        // o cualquier otro camino futuro), salimos sin tocar nada en vez de
-        // tirar MissingReferenceException.
         if (fila == null) { filasEnDesvanecimiento.Remove(fila); yield break; }
 
         var grupo = fila.GetComponent<CanvasGroup>();
@@ -152,13 +136,23 @@ public class HUDController : MonoBehaviour
         if (fila != null)
         {
             bool eraSecundaria = fila.transform.parent == contenedorSecundarios;
+
+            // FIX: antes se chequeaba "entrada.Key != null" para saber si
+            // FirstOrDefault había encontrado algo. Eso funcionaba con string
+            // (que puede ser null), pero MisionId es un enum — un tipo por
+            // valor que nunca es null, así que esa comparación ya no
+            // compila. Ahora se chequea "entrada.Value != null": si
+            // FirstOrDefault no encontró ninguna entrada que apunte a esta
+            // fila, el KeyValuePair por defecto tiene Value = null
+            // (GameObject sí es un tipo por referencia), así que sigue
+            // siendo una forma válida de detectar "no se encontró".
             var entrada = filas.FirstOrDefault(kv => kv.Value == fila);
-            if (entrada.Key != null) filas.Remove(entrada.Key);
+            if (entrada.Value != null) filas.Remove(entrada.Key);
             Destroy(fila);
 
             if (eraSecundaria)
             {
-                yield return null; // esperar a que Destroy() se aplique antes de contar los hijos restantes
+                yield return null;
                 ActualizarVisibilidadOpcional();
             }
         }
@@ -166,7 +160,7 @@ public class HUDController : MonoBehaviour
 
     // ---------- Items ----------
 
-    public void ActualizarItem(string tipo, int cantidad)
+    public void ActualizarItem(TipoRecurso tipo, int cantidad)
     {
         if (slotItemPrefab == null) { Debug.LogError("HUDController: falta asignar slotItemPrefab"); return; }
         if (contenedorItems == null) { Debug.LogError("HUDController: falta asignar contenedorItems"); return; }
@@ -199,13 +193,13 @@ public class HUDController : MonoBehaviour
 
     public void SetCrosshairForzado(bool ocultar) => crosshair.ForzarOculto(ocultar);
 
-    public void ActualizarTextoFila(string id, string texto)
+    public void ActualizarTextoFila(MisionId id, string texto)
     {
         if (filas.TryGetValue(id, out GameObject fila))
             fila.GetComponentInChildren<TMP_Text>().text = $"- {texto}";
     }
 
-    public void EscalarFilaAPrincipal(string id)
+    public void EscalarFilaAPrincipal(MisionId id)
     {
         if (!filas.TryGetValue(id, out GameObject fila)) return;
         fila.transform.SetParent(contenedorPrincipales, false);

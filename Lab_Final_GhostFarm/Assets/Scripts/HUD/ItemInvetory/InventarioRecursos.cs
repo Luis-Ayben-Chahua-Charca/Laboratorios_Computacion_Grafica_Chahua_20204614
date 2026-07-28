@@ -6,7 +6,9 @@ public class InventarioRecursos : MonoBehaviour
     public static InventarioRecursos Instance { get; private set; }
     [SerializeField] private HUDController hud;
 
-    private Dictionary<string, int> recursos = new Dictionary<string, int>();
+    // FIX: antes era Dictionary<string, int>. Con TipoRecurso como enum,
+    // la clave ahora es TipoRecurso — sin typos posibles.
+    private Dictionary<TipoRecurso, int> recursos = new Dictionary<TipoRecurso, int>();
 
     void Awake()
     {
@@ -14,21 +16,20 @@ public class InventarioRecursos : MonoBehaviour
         Instance = this;
     }
 
-    public void Agregar(string tipo, int cantidad = 1)
+    public void Agregar(TipoRecurso tipo, int cantidad = 1)
     {
         if (!recursos.ContainsKey(tipo)) recursos[tipo] = 0;
         recursos[tipo] += cantidad;
         hud.ActualizarItem(tipo, recursos[tipo]);
     }
 
-    // NUEVO: a diferencia de Agregar (que suma), esto fija la cantidad exacta.
-    // Pensado para StageLoader, que necesita dejar el inventario en un estado
-    // puntual (ej. "5 de Avena") sin depender de cuánto hubiera antes.
-    public void ForzarCantidad(string tipo, int cantidad)
+    // Usado por StageLoader: a diferencia de Agregar (que suma), esto fija
+    // la cantidad exacta, sin depender de cuánto hubiera antes.
+    public void ForzarCantidad(TipoRecurso tipo, int cantidad)
     {
         recursos[tipo] = cantidad;
         hud.ActualizarItem(tipo, cantidad);
     }
 
-    public int Cantidad(string tipo) => recursos.TryGetValue(tipo, out int c) ? c : 0;
+    public int Cantidad(TipoRecurso tipo) => recursos.TryGetValue(tipo, out int c) ? c : 0;
 }

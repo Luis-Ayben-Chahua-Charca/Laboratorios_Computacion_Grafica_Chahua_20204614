@@ -20,6 +20,7 @@ public class VisualModeController : MonoBehaviour
 
     [Header("Sensación de escala")]
     [SerializeField] private FPSCameraController cameraController;
+    [SerializeField] private ManoJugador manoJugador;
     [SerializeField] private float bajarAlturaEnMemoria = 0.4f;
 
     [Header("Fog")]
@@ -67,6 +68,7 @@ public class VisualModeController : MonoBehaviour
         if (volumeRealista == null) Debug.LogError("Falta asignar volumeRealista", this);
         if (volumeMemoria == null) Debug.LogError("Falta asignar volumeMemoria", this);
         if (cameraController == null) Debug.LogError("Falta asignar cameraController", this);
+        if (manoJugador == null) Debug.LogError("Falta asignar manoJugador", this);
 
         skyboxController.EntrarModoMemoria();
         foreach (var obj in objetosDuales) obj.SetModo(true);
@@ -82,6 +84,7 @@ public class VisualModeController : MonoBehaviour
         if (volumeRealista == null) Debug.LogError("Falta asignar volumeRealista", this);
         if (volumeMemoria == null) Debug.LogError("Falta asignar volumeMemoria", this);
         if (cameraController == null) Debug.LogError("Falta asignar cameraController", this);
+        if (manoJugador == null) Debug.LogError("Falta asignar manoJugador", this);
 
         foreach (var obj in objetosDuales) obj.SetModo(false);
 
@@ -106,6 +109,7 @@ public class VisualModeController : MonoBehaviour
         RenderSettings.fogDensity = memoria ? fogDensityMemoria : fogDensityRealista;
 
         cameraController.SetOffsetAltura(memoria ? -bajarAlturaEnMemoria : 0f);
+        manoJugador.SetOffsetAltura(memoria ? -bajarAlturaEnMemoria : 0f);
     }
 
     private IEnumerator BlendLuz(bool memoria)
@@ -133,6 +137,7 @@ public class VisualModeController : MonoBehaviour
             RenderSettings.fogDensity = Mathf.Lerp(memoria ? fogDensityRealista : fogDensityMemoria, memoria ? fogDensityMemoria : fogDensityRealista, p);
 
             cameraController.SetOffsetAltura(Mathf.Lerp(offsetInicio, offsetFin, p));
+            manoJugador.SetOffsetAltura(Mathf.Lerp(offsetInicio, offsetFin, p));
 
             yield return null;
         }

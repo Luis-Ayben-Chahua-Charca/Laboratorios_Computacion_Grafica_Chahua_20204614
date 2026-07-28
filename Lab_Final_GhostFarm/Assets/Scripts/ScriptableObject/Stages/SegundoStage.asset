@@ -16,14 +16,17 @@ MonoBehaviour:
   posicionJugador: {x: 435.95212, y: 69.99633, z: 622.72736}
   rotacionJugadorEuler: {x: 0, y: -61.872, z: 0}
   condicionCielo: 0
-  misionesPrincipales: []
-  misionesSecundarias:
-  - id: '"cortar_parejo"'
-    descripcion: '"Cortar parejo (0/5)"'
+  misionesPrincipales:
+  - id: 4
+    descripcion: Repara la Cerca
+  misionesSecundarias: []
   itemsIniciales:
-  - tipo: Avena
+  - tipo: 0
     cantidad: 5
-  jugadorTieneHoz: 1
-  avenaCortadosMedio: 5
-  avenaCorregidosParejo: 0
-  avenaMisionSecundariaActiva: 0
+  - tipo: 1
+    cantidad: 0
+  avena:
+    jugadorTieneHoz: 1
+    cortadosMedio: 5
+    corregidosParejo: 5
+    misionSecundariaActiva: 0

@@ -1,7 +1,7 @@
 [System.Serializable]
 public class Objetivo
 {
-    public string id;
+    public MisionId id;
     public string descripcion;
     public bool completado;
 }

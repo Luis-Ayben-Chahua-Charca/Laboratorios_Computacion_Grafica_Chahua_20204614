@@ -4,7 +4,7 @@ using UnityEngine;
 public class MisionManager : MonoBehaviour
 {
     public static MisionManager Instance { get; private set; }
-    public static event System.Action<string> OnObjetivoCompletado;
+    public static event System.Action<MisionId> OnObjetivoCompletado;
 
     [SerializeField] private HUDController hud;
 
@@ -29,10 +29,9 @@ public class MisionManager : MonoBehaviour
         hud.AgregarFilaSecundaria(objetivo);
     }
 
-    // NUEVO: usado por StageLoader para saltar directo a un estado de
-    // misiones específico (ej. "cortar_parejo" ya activa, sin haber
-    // completado nada de la cadena normal). No dispara OnObjetivoCompletado —
-    // a propósito, ya que estamos fijando un estado, no completando nada.
+    // Usado por StageLoader para saltar directo a un estado de misiones
+    // específico. No dispara OnObjetivoCompletado — a propósito, ya que
+    // estamos fijando un estado, no completando nada.
     public void ForzarEstado(List<Objetivo> nuevasPrincipales, List<Objetivo> nuevasSecundarias)
     {
         principales = nuevasPrincipales ?? new List<Objetivo>();
@@ -41,7 +40,7 @@ public class MisionManager : MonoBehaviour
         hud.RenderizarSecundarios(secundarios);
     }
 
-    public void ActualizarDescripcion(string id, string nuevaDescripcion)
+    public void ActualizarDescripcion(MisionId id, string nuevaDescripcion)
     {
         var obj = principales.Find(o => o.id == id) ?? secundarios.Find(o => o.id == id);
         if (obj == null) return;
@@ -49,13 +48,7 @@ public class MisionManager : MonoBehaviour
         hud.ActualizarTextoFila(id, nuevaDescripcion);
     }
 
-    // FIX: antes, si el objetivo estaba en "principales", se hacía return
-    // ANTES de invocar OnObjetivoCompletado, así que ninguna escena que
-    // dependiera de ese evento (ej. CampoAvena esperando "recoger_hoz")
-    // se enteraba jamás. Ahora el evento se invoca en los 3 casos:
-    // encontrado en principales, encontrado en secundarios, o no encontrado
-    // (con un warning para detectar typos de id a futuro).
-    public void CompletarObjetivo(string id)
+    public void CompletarObjetivo(MisionId id)
     {
         var obj = principales.Find(o => o.id == id);
         if (obj != null)
@@ -75,10 +68,10 @@ public class MisionManager : MonoBehaviour
             return;
         }
 
-        Debug.LogWarning($"MisionManager.CompletarObjetivo: no se encontró ningún objetivo con id '{id}' en principales ni secundarios (¿typo?)", this);
+        Debug.LogWarning($"MisionManager.CompletarObjetivo: no se encontró ningún objetivo con id '{id}' en principales ni secundarios (¿falta agregarlo antes?)", this);
     }
 
-    public void EscalarAPrincipal(string id)
+    public void EscalarAPrincipal(MisionId id)
     {
         var obj = secundarios.Find(o => o.id == id);
         if (obj == null) return;
