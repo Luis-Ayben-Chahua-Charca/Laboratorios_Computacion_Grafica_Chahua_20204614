@@ -6,6 +6,7 @@
 public enum TipoRecurso
 {
     Avena,
+    Cuerda,
     Encendedor,
     // ... vas sumando acá cada nuevo recurso, a medida que armés la escena
 }

@@ -13,6 +13,12 @@ public class CampoAvena : MonoBehaviour, IEstadoDebug
     [Header("Diálogo al completar el corte principal (opcional)")]
     [SerializeField] private DialogoData dialogoAlCompletar;
 
+    // NUEVO: reemplaza la lógica de EscalarObsesion() que antes vivía acá
+    // adentro, y a SalidaCampoAvena.cs (que ya no hace falta). Este
+    // componente vive en el mismo GameObject que el Collider trigger del
+    // perímetro del campo — ver instrucciones de configuración.
+    [SerializeField] private ComponenteObsesion obsesion;
+
     private List<AvenaMechon> mechones = new List<AvenaMechon>();
     private FlashbackTrigger flashbackPrimerCorte;
 
@@ -63,12 +69,6 @@ public class CampoAvena : MonoBehaviour, IEstadoDebug
         {
             MisionManager.Instance.CompletarObjetivo(idMisionPrincipal);
             flashbackPrimerCorte.Finalizar();
-
-            // NUEVO: antes esto llamaba a IniciarMisionSecundaria() directo.
-            // Ahora, si hay un diálogo asignado, se muestra primero (esperando
-            // Espacio) y la secundaria recién aparece cuando el diálogo
-            // termina. Si dialogoAlCompletar es null, DialogoController llama
-            // al callback de inmediato — mismo comportamiento que antes.
             DialogoController.Instance.MostrarDialogo(dialogoAlCompletar, IniciarMisionSecundaria);
         }
         else
@@ -80,6 +80,7 @@ public class CampoAvena : MonoBehaviour, IEstadoDebug
     private void IniciarMisionSecundaria()
     {
         misionSecundariaActiva = true;
+        obsesion.Activar();
         MisionManager.Instance.AgregarSecundario(new Objetivo
         {
             id = idMisionSecundaria,
@@ -94,16 +95,13 @@ public class CampoAvena : MonoBehaviour, IEstadoDebug
         MisionManager.Instance.ActualizarDescripcion(idMisionSecundaria, $"Cortar parejo ({corregidosParejo}/{cortadosMedio})");
 
         if (corregidosParejo >= cortadosMedio)
+        {
             MisionManager.Instance.CompletarObjetivo(idMisionSecundaria);
+            obsesion.MarcarCompleta();
+        }
     }
 
     public bool MisionSecundariaCompleta() => !misionSecundariaActiva || corregidosParejo >= cortadosMedio;
-
-    public void EscalarObsesion()
-    {
-        if (!misionSecundariaActiva || MisionSecundariaCompleta()) return;
-        MisionManager.Instance.EscalarAPrincipal(idMisionSecundaria);
-    }
 
     public void AplicarEstadoDebug(StageData etapa)
     {
@@ -120,15 +118,19 @@ public class CampoAvena : MonoBehaviour, IEstadoDebug
             mechones[i].ForzarEstadoDebug(yaParejo ? EstadoMechon.CortadoParejo : EstadoMechon.CortadoMedio);
         }
 
-        // NUEVO: en vez de depender de que quien arma el StageData tipee a
-        // mano un texto de descripción que coincida con el que generaría el
-        // juego real (ej. "Cortar avena (3/5)"), recalculamos acá con el
-        // mismo formato exacto que usa ReportarCorte/ReportarCorteParejo.
-        // Esto hace que el campo "descripcion" de esas entradas en el
-        // StageData sea puramente cosmético/ignorable para estas dos
-        // misiones puntuales — StageLoader ya creó la fila con ForzarEstado
-        // antes de llegar acá, así que ActualizarDescripcion la encuentra y
-        // la corrige con el valor real.
+        // NUEVO: sincroniza el ComponenteObsesion con el progreso de la
+        // etapa, para que salir del área inmediatamente después de un salto
+        // se comporte igual que si se hubiera jugado normalmente hasta ahí.
+        if (!misionSecundariaActiva)
+        {
+            obsesion.Desactivar();
+        }
+        else
+        {
+            obsesion.Activar();
+            if (MisionSecundariaCompleta()) obsesion.MarcarCompleta();
+        }
+
         if (cortadosMedio < objetivoCorte)
             MisionManager.Instance.ActualizarDescripcion(idMisionPrincipal, $"Cortar avena ({cortadosMedio}/{objetivoCorte})");
 
