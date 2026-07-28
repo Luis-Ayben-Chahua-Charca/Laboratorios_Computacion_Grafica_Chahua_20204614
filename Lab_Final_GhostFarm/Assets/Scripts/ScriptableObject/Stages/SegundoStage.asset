@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5e005cc767b3a48b623da532720e3d, type: 3}
+  m_Name: SegundoStage
+  m_EditorClassIdentifier: Assembly-CSharp::StageData
+  nombre: Segundo Stage Establo
+  posicionJugador: {x: 435.95212, y: 69.99633, z: 622.72736}
+  rotacionJugadorEuler: {x: 0, y: -61.872, z: 0}
+  condicionCielo: 0
+  misionesPrincipales: []
+  misionesSecundarias:
+  - id: '"cortar_parejo"'
+    descripcion: '"Cortar parejo (0/5)"'
+  itemsIniciales:
+  - tipo: Avena
+    cantidad: 5
+  jugadorTieneHoz: 1
+  avenaCortadosMedio: 5
+  avenaCorregidosParejo: 0
+  avenaMisionSecundariaActiva: 0

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5e005cc767b3a48b623da532720e3d, type: 3}
+  m_Name: PrimerStage
+  m_EditorClassIdentifier: Assembly-CSharp::StageData
+  nombre: Primer Stage Avena
+  posicionJugador: {x: 489.64697, y: 61.00531, z: 586.4384}
+  rotacionJugadorEuler: {x: 0, y: -61.872, z: 0}
+  condicionCielo: 0
+  misionesPrincipales: []
+  misionesSecundarias: []
+  itemsIniciales: []
+  jugadorTieneHoz: 0
+  avenaCortadosMedio: 0
+  avenaCorregidosParejo: 0
+  avenaMisionSecundariaActiva: 0
