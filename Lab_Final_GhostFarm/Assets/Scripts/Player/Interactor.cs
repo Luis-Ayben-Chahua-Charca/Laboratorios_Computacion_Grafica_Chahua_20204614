@@ -7,11 +7,15 @@ public class Interactor : MonoBehaviour
     [SerializeField] private KeyCode teclaInteractuar = KeyCode.E;
 
     private IInteractable actual;
-    public IInteractable Actual => actual; // <- esta es la línea que probablemente falta
+    public IInteractable Actual => actual;
 
     void Update()
     {
-        if (SceneDirector.Instance.EstadoActual != EstadoJuego.ExploracionLibre) return;
+        // FIX: antes se comparaba EstadoActual != ExploracionLibre, lo que
+        // bloqueaba la interacción apenas arrancaba cualquier Flashback,
+        // incluso los que declaran mantenerControlJugador = true.
+        // JugadorTieneControl ya contempla ese caso.
+        if (!SceneDirector.Instance.JugadorTieneControl) return;
 
         DetectarInteractuable();
         if (actual != null && Input.GetKeyDown(teclaInteractuar))
@@ -25,7 +29,6 @@ public class Interactor : MonoBehaviour
 
         if (Physics.Raycast(origenRaycast.position, origenRaycast.forward, out RaycastHit hit, distanciaInteraccion))
         {
-            //Debug.Log("Rayo golpeó: " + hit.collider.name);
             actual = hit.collider.GetComponentInParent<IInteractable>();
         }
     }

@@ -1,8 +1,12 @@
 using System.Collections.Generic;
-/*
-void Start()
+using UnityEngine;
+
+public class FlujoDia1 : MonoBehaviour
 {
-    MisionManager.Instance.IniciarMisionPrincipal(new List<Objetivo> {
-        new Objetivo { id = "recoger_hoz", descripcion = "Recoger la hoz" }
-    });
-}*/
+    void Start()
+    {
+        MisionManager.Instance.IniciarMisionPrincipal(new List<Objetivo> {
+            new Objetivo { id = MisionIds.RecogerHoz, descripcion = "Recoger la hoz" }
+        });
+    }
+}

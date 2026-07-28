@@ -15,6 +15,7 @@ public class HUDController : MonoBehaviour
     [SerializeField] private Transform contenedorPrincipales;
     [SerializeField] private Transform contenedorSecundarios;
     [SerializeField] private GameObject filaObjetivoPrefab;
+    [SerializeField] private GameObject etiquetaOpcional; // el texto/encabezado "Opcional" del HUD
 
     [Header("Items")]
     [SerializeField] private Transform contenedorItems;
@@ -28,6 +29,22 @@ public class HUDController : MonoBehaviour
 
     private Dictionary<string, SlotItemUI> slotsActivos = new Dictionary<string, SlotItemUI>();
 
+    // FIX: filas que están actualmente desvaneciéndose (fade-out tras completarse).
+    // RenderizarPrincipales no debe destruirlas de golpe: si lo hace, la corrutina
+    // DesvanecerYQuitar se despierta después con una referencia ya destruida y
+    // tira MissingReferenceException.
+    private HashSet<GameObject> filasEnDesvanecimiento = new HashSet<GameObject>();
+
+    void Awake() => ActualizarVisibilidadOpcional();
+
+    // FIX: la etiqueta "Opcional" solo debe verse mientras haya al menos una
+    // misión secundaria activa. Se llama cada vez que contenedorSecundarios
+    // gana o pierde un hijo (agregar, escalar a principal, o desvanecerse tras completarse).
+    private void ActualizarVisibilidadOpcional()
+    {
+        if (etiquetaOpcional != null)
+            etiquetaOpcional.SetActive(contenedorSecundarios.childCount > 0);
+    }
 
     // ---------- Paneles (fade) ----------
 
@@ -52,7 +69,16 @@ public class HUDController : MonoBehaviour
 
     public void RenderizarPrincipales(List<Objetivo> objetivos)
     {
-        foreach (Transform hijo in contenedorPrincipales) Destroy(hijo.gameObject);
+        // FIX: antes esto destruía TODOS los hijos de contenedorPrincipales sin
+        // excepción, incluida cualquier fila que en ese mismo frame estuviera
+        // en medio de su fade-out de "completado" (ver filasEnDesvanecimiento).
+        // Esas filas se autodestruyen solas al terminar su corrutina.
+        foreach (Transform hijo in contenedorPrincipales)
+        {
+            if (filasEnDesvanecimiento.Contains(hijo.gameObject)) continue;
+            Destroy(hijo.gameObject);
+        }
+
         foreach (var obj in objetivos)
         {
             var fila = Instantiate(filaObjetivoPrefab, contenedorPrincipales);
@@ -61,11 +87,33 @@ public class HUDController : MonoBehaviour
         }
     }
 
+    // NUEVO: simétrico a RenderizarPrincipales, pero para la lista de
+    // secundarios. Usado por MisionManager.ForzarEstado (salto de etapas) —
+    // el flujo normal del juego sigue usando AgregarFilaSecundaria de a una.
+    public void RenderizarSecundarios(List<Objetivo> objetivos)
+    {
+        foreach (Transform hijo in contenedorSecundarios)
+        {
+            if (filasEnDesvanecimiento.Contains(hijo.gameObject)) continue;
+            Destroy(hijo.gameObject);
+        }
+
+        foreach (var obj in objetivos)
+        {
+            var fila = Instantiate(filaObjetivoPrefab, contenedorSecundarios);
+            fila.GetComponentInChildren<TMP_Text>().text = $"- {obj.descripcion}";
+            filas[obj.id] = fila;
+        }
+
+        ActualizarVisibilidadOpcional();
+    }
+
     public void AgregarFilaSecundaria(Objetivo obj)
     {
         var fila = Instantiate(filaObjetivoPrefab, contenedorSecundarios);
         fila.GetComponentInChildren<TMP_Text>().text = $"- {obj.descripcion}";
         filas[obj.id] = fila;
+        ActualizarVisibilidadOpcional();
     }
 
     public void MarcarCompletado(string id, bool esSecundario)
@@ -73,22 +121,47 @@ public class HUDController : MonoBehaviour
         if (!filas.TryGetValue(id, out GameObject fila)) return;
         var texto = fila.GetComponentInChildren<TMP_Text>();
         texto.text = $"<s>{texto.text}</s>";
+        filasEnDesvanecimiento.Add(fila);
         StartCoroutine(DesvanecerYQuitar(fila));
     }
 
     private IEnumerator DesvanecerYQuitar(GameObject fila)
     {
         yield return new WaitForSeconds(1f);
+
+        // FIX: si otra cosa ya destruyó esta fila mientras esperábamos
+        // (por ejemplo un RenderizarPrincipales de una versión vieja del script,
+        // o cualquier otro camino futuro), salimos sin tocar nada en vez de
+        // tirar MissingReferenceException.
+        if (fila == null) { filasEnDesvanecimiento.Remove(fila); yield break; }
+
         var grupo = fila.GetComponent<CanvasGroup>();
+        if (grupo == null) { filasEnDesvanecimiento.Remove(fila); yield break; }
+
         float t = 0;
         while (t < 0.5f)
         {
+            if (fila == null || grupo == null) { filasEnDesvanecimiento.Remove(fila); yield break; }
             t += Time.deltaTime;
             grupo.alpha = 1 - (t / 0.5f);
             yield return null;
         }
-        filas.Remove(filas.FirstOrDefault(kv => kv.Value == fila).Key);
-        Destroy(fila);
+
+        filasEnDesvanecimiento.Remove(fila);
+
+        if (fila != null)
+        {
+            bool eraSecundaria = fila.transform.parent == contenedorSecundarios;
+            var entrada = filas.FirstOrDefault(kv => kv.Value == fila);
+            if (entrada.Key != null) filas.Remove(entrada.Key);
+            Destroy(fila);
+
+            if (eraSecundaria)
+            {
+                yield return null; // esperar a que Destroy() se aplique antes de contar los hijos restantes
+                ActualizarVisibilidadOpcional();
+            }
+        }
     }
 
     // ---------- Items ----------
@@ -137,5 +210,6 @@ public class HUDController : MonoBehaviour
         if (!filas.TryGetValue(id, out GameObject fila)) return;
         fila.transform.SetParent(contenedorPrincipales, false);
         fila.GetComponentInChildren<TMP_Text>().color = Color.red;
+        ActualizarVisibilidadOpcional();
     }
 }

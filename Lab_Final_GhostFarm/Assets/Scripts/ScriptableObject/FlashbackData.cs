@@ -7,4 +7,7 @@ public class FlashbackData : ScriptableObject
     public float duracion = 5f;
     public bool mantenerControlJugador = false;
     public bool salidaManual = false;
+
+    [Header("Diálogo al iniciar (opcional)")]
+    public DialogoData dialogoInicial;
 }

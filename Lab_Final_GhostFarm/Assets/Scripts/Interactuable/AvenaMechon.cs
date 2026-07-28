@@ -39,4 +39,17 @@ public class AvenaMechon : MonoBehaviour, IInteractable
         visualCortadoParejo.SetActive(true);
         campo.ReportarCorteParejo();
     }
+
+    // NUEVO: usado por CampoAvena.ForzarEstadoDebug (salto de etapas) para
+    // dejar este mechón visualmente en el estado que corresponde, SIN pasar
+    // por CortarMedio/CortarParejo — así no vuelve a llamar a campo.ReportarCorte()
+    // ni ReportarCorteParejo(), que ya están siendo fijados directamente por
+    // CampoAvena en ese mismo salto.
+    public void ForzarEstadoDebug(EstadoMechon nuevoEstado)
+    {
+        estado = nuevoEstado;
+        visualCrecido.SetActive(estado == EstadoMechon.Crecido);
+        visualCortadoMedio.SetActive(estado == EstadoMechon.CortadoMedio);
+        visualCortadoParejo.SetActive(estado == EstadoMechon.CortadoParejo);
+    }
 }

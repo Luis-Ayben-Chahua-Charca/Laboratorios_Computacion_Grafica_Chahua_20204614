@@ -10,7 +10,9 @@ public class ManoJugador : MonoBehaviour
 
     void Update()
     {
-        if (SceneDirector.Instance.EstadoActual != EstadoJuego.ExploracionLibre) return;
+        // FIX: mismo problema que en Interactor — usar JugadorTieneControl
+        // en vez de comparar EstadoActual directamente.
+        if (!SceneDirector.Instance.JugadorTieneControl) return;
         if (ObjetoActual != null && Input.GetKeyDown(teclaSoltar))
             Soltar();
     }
@@ -22,6 +24,16 @@ public class ManoJugador : MonoBehaviour
 
         if (objeto.Nombre == "Hoz")
             MisionManager.Instance.CompletarObjetivo("recoger_hoz");
+    }
+
+    // NUEVO: usado por StageLoader al saltar a una etapa donde el jugador ya
+    // debería tener la hoz. A propósito NO llama a CompletarObjetivo — el
+    // StageLoader ya dejó las misiones en el estado que corresponde a esa
+    // etapa, así que "recoger_hoz" no debe volver a completarse de nuevo.
+    public void EquiparSilencioso(ObjetoAgarrable objeto)
+    {
+        ObjetoActual = objeto;
+        objeto.AlEquipar(puntoDeAgarre);
     }
 
     public void Soltar()

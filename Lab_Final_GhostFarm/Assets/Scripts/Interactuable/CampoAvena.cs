@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class CampoAvena : MonoBehaviour
 {
+    // NUEVO: singleton, siguiendo el mismo patrón que SceneDirector,
+    // MisionManager, InventarioRecursos, etc. Necesario para que StageLoader
+    // pueda encontrarlo sin depender de FindObjectOfType.
+    public static CampoAvena Instance { get; private set; }
+
     private const string idMisionPrincipal = "cortar_avena";
     private const string idMisionSecundaria = "cortar_parejo";
 
@@ -15,6 +20,11 @@ public class CampoAvena : MonoBehaviour
     private int corregidosParejo = 0;
     private bool misionSecundariaActiva = false;
 
+    void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
 
     void Start()
     {
@@ -37,6 +47,17 @@ public class CampoAvena : MonoBehaviour
     }
     public void ReportarCorte()
     {
+        // FIX: sin este guard, cortar mechones más allá del objetivo (6to, 7mo...)
+        // volvía a entrar en el bloque de abajo cada vez, re-llamando a
+        // IniciarMisionSecundaria() y generando objetivos "cortar_parejo"
+        // duplicados. El jugador puede seguir cortando avena de más (se ve y
+        // se siente bien), simplemente ya no cuenta para la misión.
+        if (cortadosMedio >= objetivoCorte)
+        {
+            InventarioRecursos.Instance.Agregar("Avena");
+            return;
+        }
+
         cortadosMedio++;
         InventarioRecursos.Instance.Agregar("Avena");
 
@@ -66,7 +87,12 @@ public class CampoAvena : MonoBehaviour
     }
     public void ReportarCorteParejo()
     {
-        if (!misionSecundariaActiva) return;
+        // FIX: mismo problema — emparejar mechones cortados de más (fuera de
+        // los 5 contados) seguía sumando a corregidosParejo contra un
+        // cortadosMedio que ya no representaba el objetivo real, y volvía a
+        // llamar CompletarObjetivo sobre una misión ya completada.
+        if (!misionSecundariaActiva || MisionSecundariaCompleta()) return;
+
         corregidosParejo++;
         MisionManager.Instance.ActualizarDescripcion(idMisionSecundaria, $"Cortar parejo ({corregidosParejo}/{cortadosMedio})");
 
@@ -80,5 +106,23 @@ public class CampoAvena : MonoBehaviour
     {
         if (!misionSecundariaActiva || MisionSecundariaCompleta()) return;
         MisionManager.Instance.EscalarAPrincipal(idMisionSecundaria);
+    }
+
+    // NUEVO: usado por StageLoader para saltar directo a un progreso de
+    // corte específico, sin jugar el flujo real. Fija las cuentas internas Y
+    // actualiza el visual de los mechones correspondientes (los primeros N
+    // como ya cortados), para que el campo se vea consistente con la etapa.
+    public void ForzarEstadoDebug(int cortadosMedioObjetivo, bool misionSecundariaActivaObjetivo, int corregidosParejoObjetivo)
+    {
+        cortadosMedio = Mathf.Clamp(cortadosMedioObjetivo, 0, objetivoCorte);
+        misionSecundariaActiva = misionSecundariaActivaObjetivo;
+        corregidosParejo = Mathf.Clamp(corregidosParejoObjetivo, 0, cortadosMedio);
+
+        for (int i = 0; i < mechones.Count; i++)
+        {
+            if (i >= cortadosMedio) { mechones[i].ForzarEstadoDebug(EstadoMechon.Crecido); continue; }
+            bool yaParejo = i < corregidosParejo;
+            mechones[i].ForzarEstadoDebug(yaParejo ? EstadoMechon.CortadoParejo : EstadoMechon.CortadoMedio);
+        }
     }
 }

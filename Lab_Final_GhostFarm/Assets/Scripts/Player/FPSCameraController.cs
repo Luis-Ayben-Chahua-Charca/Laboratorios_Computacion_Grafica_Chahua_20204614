@@ -10,13 +10,19 @@ public class FPSCameraController : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float maxVerticalAngle = 80f;
 
-    [Header ("Positions Camera")]
+    [Header("Positions Camera")]
     private float alturaOriginalY;
 
 
     private float verticalRotation = 0f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    // FIX: esto vivía en Start(). Unity garantiza que TODOS los Awake() de la
+    // escena corren antes que CUALQUIER Start(), pero no garantiza el orden
+    // entre los Start() de distintos scripts. VisualModeController.Start()
+    // llama a SetOffsetAltura() apenas arranca el juego, y si ese Start()
+    // corría antes que este, alturaOriginalY todavía era 0 (el default de
+    // un float) — la cámara quedaba pegada al piso. Awake() elimina la carrera.
+    void Awake()
     {
         alturaOriginalY = cameraPivot.localPosition.y;
     }
