@@ -6,8 +6,6 @@ public class InventarioRecursos : MonoBehaviour
     public static InventarioRecursos Instance { get; private set; }
     [SerializeField] private HUDController hud;
 
-    // FIX: antes era Dictionary<string, int>. Con TipoRecurso como enum,
-    // la clave ahora es TipoRecurso — sin typos posibles.
     private Dictionary<TipoRecurso, int> recursos = new Dictionary<TipoRecurso, int>();
 
     void Awake()
@@ -23,8 +21,16 @@ public class InventarioRecursos : MonoBehaviour
         hud.ActualizarItem(tipo, recursos[tipo]);
     }
 
-    // Usado por StageLoader: a diferencia de Agregar (que suma), esto fija
-    // la cantidad exacta, sin depender de cuánto hubiera antes.
+    // NUEVO: opuesto de Agregar. Usado por ComedoroCorral al depositar pasto
+    // — descuenta sin bajar de 0, y refleja el cambio en el HUD igual que Agregar.
+    public void Consumir(TipoRecurso tipo, int cantidad = 1)
+    {
+        int actual = Cantidad(tipo);
+        int nuevo = Mathf.Max(0, actual - cantidad);
+        recursos[tipo] = nuevo;
+        hud.ActualizarItem(tipo, nuevo);
+    }
+
     public void ForzarCantidad(TipoRecurso tipo, int cantidad)
     {
         recursos[tipo] = cantidad;

@@ -14,7 +14,6 @@ public class StageLoader : MonoBehaviour
     [SerializeField] private Transform jugador;
     [SerializeField] private SkyboxController skyboxController;
     [SerializeField] private ManoJugador manoJugador;
-    [SerializeField] private ObjetoAgarrable hozEnEscena;
 
     void Awake()
     {
@@ -52,19 +51,24 @@ public class StageLoader : MonoBehaviour
         foreach (var item in etapa.itemsIniciales)
             InventarioRecursos.Instance.ForzarCantidad(item.tipo, item.cantidad);
 
-        // FIX: antes solo se sabía EQUIPAR la hoz (jugadorTieneHoz = true).
-        // Si veníamos de otra etapa donde el jugador la tenía en mano y
-        // saltábamos a una etapa con jugadorTieneHoz = false, se quedaba
-        // pegada a la cámara para siempre — nada la soltaba. Ahora el "false"
-        // también se maneja explícitamente.
-        if (etapa.avena.jugadorTieneHoz)
+        // FIX: antes comparaba candidato.MisionAlRecoger (reutilizando
+        // MisionId para identificar objetos, lo que mostraba las 8 misiones
+        // del juego en el desplegable de un StageData en vez de los objetos
+        // agarrables reales). Ahora compara por candidato.Id (ObjetoId),
+        // que es su propio enum dedicado solo a "qué objeto es esto".
+        var candidatos = FindObjectsByType<ObjetoAgarrable>(FindObjectsInactive.Include);
+        bool equipoAlgo = false;
+        foreach (var candidato in candidatos)
         {
-            if (hozEnEscena != null) manoJugador.EquiparSilencioso(hozEnEscena);
+            if (etapa.objetosEnMano.Contains(candidato.Id))
+            {
+                manoJugador.EquiparSilencioso(candidato);
+                equipoAlgo = true;
+                break; // asumimos un solo objeto en mano a la vez
+            }
         }
-        else
-        {
+        if (!equipoAlgo)
             manoJugador.SoltarSilencioso();
-        }
 
         // FIX: antes esto llamaba a CampoAvena.Instance.ForzarEstadoDebug(...)
         // por nombre, con 3 parámetros sueltos que había que mantener

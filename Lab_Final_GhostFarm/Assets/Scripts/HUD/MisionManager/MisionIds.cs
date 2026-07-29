@@ -12,6 +12,9 @@ public enum MisionId
     CortarAvena,
     CortarParejo,
     EntregarPasto,
+    BuscarCuerda,
     RepararCerca,
+    IrCocina,
+    DejarHoz,
     // ... vas sumando acá cada nuevo eslabón, a medida que armés la escena
 }

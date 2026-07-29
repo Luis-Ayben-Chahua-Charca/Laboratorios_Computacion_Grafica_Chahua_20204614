@@ -15,7 +15,7 @@ public class AvenaMechon : MonoBehaviour, IInteractable
     public void Interactuar(GameObject jugador)
     {
         var mano = jugador.GetComponent<ManoJugador>();
-        if (mano == null || mano.ObjetoActual == null || mano.ObjetoActual.Nombre != "Hoz") return;
+        if (mano == null || mano.ObjetoActual == null || mano.ObjetoActual.Id != ObjetoId.Hoz) return;
 
         switch (estado)
         {

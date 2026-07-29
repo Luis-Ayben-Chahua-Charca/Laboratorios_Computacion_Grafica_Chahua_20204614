@@ -8,9 +8,6 @@ public class ManoJugador : MonoBehaviour
 
     public ObjetoAgarrable ObjetoActual { get; private set; }
 
-    // NUEVO: mismo patrón que FPSCameraController.alturaOriginalY. Se captura
-    // en Awake (no en Start) para estar lista antes que cualquier Start() de
-    // otro script (ej. VisualModeController) intente usarla.
     private float alturaOriginalY;
 
     void Awake()
@@ -30,8 +27,12 @@ public class ManoJugador : MonoBehaviour
         ObjetoActual = objeto;
         objeto.AlEquipar(puntoDeAgarre);
 
-        if (objeto.Nombre == "Hoz")
-            MisionManager.Instance.CompletarObjetivo(MisionId.RecogerHoz);
+        // FIX: antes era "if (objeto.Nombre == "Hoz") CompletarObjetivo(RecogerHoz)"
+        // hardcodeado acá. Ahora cualquier ObjetoAgarrable declara su propia
+        // misión al recogerse (ver ObjetoAgarrable.cs) — la Hoz y la Cuerda
+        // usan el mismo camino sin que este script conozca sus nombres.
+        if (objeto.CompletaMisionAlRecoger)
+            MisionManager.Instance.CompletarObjetivo(objeto.MisionAlRecoger);
     }
 
     public void EquiparSilencioso(ObjetoAgarrable objeto)
@@ -55,11 +56,25 @@ public class ManoJugador : MonoBehaviour
         ObjetoActual = null;
     }
 
-    // NUEVO: espejo de FPSCameraController.SetOffsetAltura. VisualModeController
-    // llama a este método con el mismo valor que le pasa a la cámara, para que
-    // la mano (y cualquier objeto que tengas agarrado) baje en sincronía con
-    // la cámara al entrar en modo memoria, en vez de quedarse flotando a la
-    // altura "realista" mientras la cámara ya bajó.
+    // NUEVO: a diferencia de Soltar() (que tira el objeto al mundo) esto lo
+    // destruye directamente — para objetos que se "gastan" al usarse, como
+    // la cuerda al reparar la cerca.
+    public void ConsumirObjetoActual()
+    {
+        if (ObjetoActual == null) return;
+        Destroy(ObjetoActual.gameObject);
+        ObjetoActual = null;
+    }
+
+    // NUEVO: usado por AlmacenHerramientas — deja el objeto quieto en un
+    // punto fijo (a diferencia de Soltar(), que lo tira al piso).
+    public void DejarEn(Transform punto)
+    {
+        if (ObjetoActual == null) return;
+        ObjetoActual.ColocarEn(punto);
+        ObjetoActual = null;
+    }
+
     public void SetOffsetAltura(float offset)
     {
         Vector3 pos = puntoDeAgarre.localPosition;
